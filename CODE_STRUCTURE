@@ -1,0 +1,118 @@
+Global-Connect/
+│
+├── .github/                     # GitHub-specific files
+│   ├── workflows/               # CI/CD workflows
+│   │   ├── ci.yml               # Continuous Integration workflow
+│   │   └── cd.yml               # Continuous Deployment workflow
+│   ├── ISSUE_TEMPLATE/          # Issue templates
+│   │   ├── bug_report.md        # Bug report template
+│   │   └── feature_request.md    # Feature request template
+│   └── PULL_REQUEST_TEMPLATE.md  # Pull request template
+│
+├── backend/                     # Backend services
+│   ├── api/                     # API endpoints
+│   │   ├── user.js              # User authentication and management API
+│   │   ├── transaction.js        # Transaction processing API
+│   │   ├── analytics.js          # Analytics and reporting API
+│   │   ├── pricePrediction.js     # AI-powered price prediction API
+│   │   └── authenticity.js       # API for validating Pi authenticity
+│   ├── services/                # Business logic services
+│   │   ├── userService.js        # User-related business logic
+│   │   ├── transactionService.js  # Transaction-related logic
+│   │   ├── notificationService.js # Notification handling
+│   │   ├── pricePredictionService.js # Service for price predictions
+│   │   └── authenticityService.js # Service for authenticity validation
+│   ├── models/                  # Data models
+│   │   ├── User.js               # User model
+│   │   ├── Transaction.js         # Transaction model
+│   │   ├── Analytics.js           # Analytics model
+│   │   ├── PricePrediction.js      # Price prediction model
+│   │   └── Authenticity.js        # Authenticity model
+│   ├── controllers/             # Request handlers
+│   │   ├── userController.js      # User controller
+│   │   ├── transactionController.js # Transaction controller
+│   │   ├── analyticsController.js  # Analytics controller
+│   │   ├── pricePredictionController.js # Price prediction controller
+│   │   └── authenticityController.js # Authenticity controller
+│   ├── middleware/              # Middleware functions
+│   │   ├── authMiddleware.js      # Authentication middleware
+│   │   ├── errorHandler.js        # Error handling middleware
+│   │   ├── loggingMiddleware.js    # Logging middleware
+│   │   └── validationMiddleware.js  # Input validation middleware
+│   ├── tests/                   # Unit and integration tests
+│   │   ├── user.test.js          # User tests
+│   │   ├── transaction.test.js    # Transaction tests
+│   │   ├── analytics.test.js      # Analytics tests
+│   │   ├── pricePrediction.test.js # Price prediction tests
+│   │   └── authenticity.test.js    # Authenticity tests
+│   └── Dockerfile               # Dockerfile for backend
+│
+├── frontend/                    # Frontend application
+│   ├── src/                     # Source files
+│   │   ├── components/          # React/Vue components
+│   │   │   ├── Header.js         # Header component
+│   │   │   ├── Footer.js         # Footer component
+│   │   │   ├── TransactionForm.js # Transaction form component
+│   │   │   ├── UserProfile.js    # User profile component
+│   │   │   ├── PricePrediction.js  # Price prediction display component
+│   │   │   └── AuthenticityBadge.js # Authenticity badge component
+│   │   ├── views/               # Application views
+│   │   │   ├── Home.js           # Home view
+│   │   │   ├── Dashboard.js       # Dashboard view
+│   │   │   ├── Settings.js        # Settings view
+│   │   │   └── Analytics.js       # Analytics view
+│   │   ├── store/               # State management (Redux/Vuex)
+│   │   │   ├── actions.js        # Action creators
+│   │   │   ├── reducers.js       # Reducers
+│   │   │   └── store.js          # Store configuration
+│   │   ├── services/            # API service calls
+│   │   │   ├── api.js            # API service configuration
+│   │   │   ├── userService.js     # User service
+│   │   │   ├── pricePredictionService.js # Price prediction service
+│   │   │   └── authenticityService.js # Authenticity service
+│   │   ├── assets/              # Images, fonts, etc.
+│   │   │   ├── logo.png          # Project logo
+│   │   │   └── styles.css        # Global styles
+│   │   └── App.js               # Main application file
+│   ├── public/                  # Public assets
+│   │   ├── index.html           # Main HTML file
+│   │   └── favicon.ico          # Favicon
+│   └── Dockerfile               # Dockerfile for frontend
+│
+├── smart_contracts/             # Smart contracts
+│   ├── PiCoin.sol               # PiCoin smart contract
+│   ├── DualValueSystem.sol      # Dual Value System contract
+│   ├── migrations/              # Migration scripts
+│   │   ├── 1_initial_migration.js # Initial migration script
+│   │   └── 2_deploy_contracts.js  # Contract deployment script
+│   └── tests/                   # Smart contract tests
+│       ├── PiCoin.test.js       # PiCoin contract tests
+│       └── DualValueSystem.test.js # Dual Value System tests
+│
+├── scripts/                     # Utility scripts
+│   ├── deploy.js                # Deployment scripts
+│   ├── setup.js                 # Initial setup scripts
+│   ├── utils.js                 # Utility functions
+│   └── generateReport.js        # Report generation script
+│
+├── docs/                        # Documentation
+│   ├── API_Documentation.md     # API documentation
+│   ├── User_Guide.md            # User guide
+│   ├── Developer_Guide.md       # Developer guide
+│   ├── Architecture_Diagram.md   # System architecture diagram
+│   └── Security_Overview.md      # Overview of security measures
+│
+├── tests/                       # End-to-end tests
+│   ├── e2e/                     # End-to-end test cases
+│   │   ├── userFlow.test.js     # User flow tests
+│   │   ├── transactionFlow.test.js # Transaction flow tests
+│   │   └── authenticityFlow.test.js # Authenticity flow tests
+│   └── integration/             # Integration test cases
+│       ├── apiIntegration.test.js # API integration tests
+│       └── smartContractIntegration.test.js # Smart contract integration tests
+│
+├── .env                         # Environment variables
+├── .gitignore                   # Git ignore file
+├── LICENSE                      # License file
+├── README.md                    # Project overview and setup instructions
+└── docker-compose.yml           # Docker Compose file for multi-container setup
