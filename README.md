@@ -1,2 +1,2 @@
 # Global-Connect
-Global Connect is an innovative initiative aimed at enhancing the adoption of PiDualTx technology and PiCoin worldwide.
+Global Connect is an innovative initiative aimed at enhancing the adoption of PiDualTx technology and PiCoin worldwide. This repository contains the project's codebase, documentation, and resources for developing a user-friendly mobile application, educational materials, and tools for business partnerships. The goal is to create a sustainable ecosystem that supports the use of PiCoin as a widely accepted digital currency.
