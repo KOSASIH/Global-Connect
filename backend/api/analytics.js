@@ -1,42 +1,47 @@
 // backend/api/analytics.js
 const express = require('express');
+const TransactionService = require('../services/transactionService');
 const router = express.Router();
 
-// In-memory transaction storage (for demonstration purposes)
-const transactions = require('./transaction').transactions; // Import transactions from transaction.js
-
 // Get total transaction count
-router.get('/transaction-count', (req, res) => {
-    const totalCount = transactions.length;
-    res.json({ totalTransactionCount: totalCount });
+router.get('/transaction-count', async (req, res) => {
+    try {
+        const totalCount = await TransactionService.getTransactionCount();
+        res.json({ totalTransactionCount: totalCount });
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
 });
 
 // Get total transaction amount
-router.get('/total-transaction-amount', (req, res) => {
-    const totalAmount = transactions.reduce((sum, tx) => sum + parseFloat(tx.amount), 0);
-    res.json({ totalTransactionAmount: totalAmount });
+router.get('/total-transaction-amount', async (req, res) => {
+    try {
+        const totalAmount = await TransactionService.getTotalTransactionAmount();
+        res.json({ totalTransactionAmount: totalAmount });
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
 });
 
-// Get transaction history for a specific user
-router.get('/user-history/:username', (req, res) => {
+// Get user transaction history
+router.get('/user-history/:username', async (req, res) => {
     const { username } = req.params;
-    const userTransactions = transactions.filter(tx => tx.from === username || tx.to === username);
-    res.json(userTransactions);
+    try {
+        const userTransactions = await TransactionService.getTransactionHistory(username);
+        res.json(userTransactions);
+    } catch (error) {
+        res.status(404).json({ message: error.message });
+    }
 });
 
 // Get asset distribution
-router.get('/asset-distribution', (req, res) => {
-    const assetDistribution = {};
-
-    transactions.forEach(tx => {
-        if (!assetDistribution[tx.assetCode]) {
-            assetDistribution[tx.assetCode] = 0;
-        }
-        assetDistribution[tx.assetCode] += parseFloat(tx.amount);
-    });
-
-    res.json(assetDistribution);
+router.get('/asset-distribution', async (req, res) => {
+    try {
+        const assetDistribution = await TransactionService.getAssetDistribution();
+        res.json(assetDistribution);
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
 });
 
-// Export the router
 module.exports = router;
