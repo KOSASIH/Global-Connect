@@ -1,61 +1,62 @@
 // backend/api/user.js
 const express = require('express');
-const jwt = require('jsonwebtoken');
-const bcrypt = require('bcrypt');
+const UserService = require('../services/userService');
 const router = express.Router();
-
-// In-memory user storage (for demonstration purposes)
-const users = [];
-
-// Secret key for JWT
-const JWT_SECRET = 'YOUR_SECRET_KEY'; // Replace with a strong secret key
-
-// Middleware to authenticate JWT
-function authenticateToken(req, res, next) {
-    const token = req.headers['authorization'] && req.headers['authorization'].split(' ')[1];
-    if (!token) return res.sendStatus(401);
-
-    jwt.verify(token, JWT_SECRET, (err, user) => {
-        if (err) return res.sendStatus(403);
-        req.user = user;
-        next();
-    });
-}
 
 // User registration
 router.post('/register', async (req, res) => {
     const { username, password } = req.body;
-
-    // Check if user already exists
-    const existingUser  = users.find(user => user.username === username);
-    if (existingUser ) {
-        return res.status(400).json({ message: 'User  already exists' });
+    try {
+        const newUser  = await UserService.register(username, password);
+        res.status(201).json({ message: 'User  registered successfully', user: newUser  });
+    } catch (error) {
+        res.status(400).json({ message: error.message });
     }
-
-    // Hash the password
-    const hashedPassword = await bcrypt.hash(password, 10);
-    users.push({ username, password: hashedPassword });
-    res.status(201).json({ message: 'User  registered successfully' });
 });
 
 // User login
 router.post('/login', async (req, res) => {
     const { username, password } = req.body;
-    const user = users.find(user => user.username === username);
-
-    if (!user || !(await bcrypt.compare(password, user.password))) {
-        return res.status(401).json({ message: 'Invalid credentials' });
+    try {
+        const { token, user } = await UserService.login(username, password);
+        res.json({ token, user });
+    } catch (error) {
+        res.status(401).json({ message: error.message });
     }
-
-    // Generate JWT token
-    const token = jwt.sign({ username: user.username }, JWT_SECRET, { expiresIn: '1h' });
-    res.json({ token });
 });
 
-// Get user profile (protected route)
-router.get('/profile', authenticateToken, (req, res) => {
-    res.json({ username: req.user.username });
+// Get user profile
+router.get('/profile/:username', async (req, res) => {
+    const { username } = req.params;
+    try {
+        const userProfile = await UserService.getUser Profile(username);
+        res.json(userProfile);
+    } catch (error) {
+        res.status(404).json({ message: error.message });
+    }
 });
 
-// Export the router
+// Update user profile
+router.put('/profile/:username', async (req, res) => {
+    const { username } = req.params;
+    const updates = req.body;
+    try {
+        const updatedUser  = await UserService.updateUser Profile(username, updates);
+        res.json(updatedUser );
+    } catch (error) {
+        res.status(404).json({ message: error.message });
+    }
+});
+
+// Delete user account
+router.delete('/profile/:username', async (req, res) => {
+    const { username } = req.params;
+    try {
+        const deletedUser  = await UserService.deleteUser (username);
+        res.json({ message: 'User  deleted successfully', user: deletedUser  });
+    } catch (error) {
+        res.status(404).json({ message: error.message });
+    }
+});
+
 module.exports = router;
