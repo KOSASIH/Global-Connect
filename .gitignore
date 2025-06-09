@@ -1,2 +1,39 @@
-# Google App Engine generated folder
-appengine-generated/
+# Node.js dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+
+# Environment variables
+.env
+
+# Logs
+logs/
+*.log
+
+# Temporary files
+tmp/
+temp/
+
+# IDE and editor specific files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Coverage reports
+coverage/
+
+# Test output
+tests/e2e/*.test.js
+tests/integration/*.test.js
+
+# Miscellaneous
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
