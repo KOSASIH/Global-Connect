@@ -12,6 +12,7 @@ const ASSET_NAME = 'PiCoin';
 const ASSET_CODE = 'PI';
 const ASSET_ISSUER = accountId; // Issuer of the asset
 const STABLE_VALUE = 314159; // 1 Pi = $314,159
+const TOTAL_SUPPLY = 100000000000; // Total supply of Pi Coins
 
 // Function to create a new asset
 async function createAsset() {
@@ -22,14 +23,14 @@ async function createAsset() {
     })
     .addOperation(StellarSdk.Operation.changeTrust({
         asset: new StellarSdk.Asset(ASSET_CODE, ASSET_ISSUER),
-        limit: '1000000', // Set trust limit
+        limit: TOTAL_SUPPLY.toString(), // Set trust limit to total supply
     }))
     .setTimeout(30)
     .build();
 
     transaction.sign(keypair);
     await server.submitTransaction(transaction);
-    console.log(`Asset ${ASSET_CODE} created successfully!`);
+    console.log(`Asset ${ASSET_CODE} created successfully with a total supply of ${TOTAL_SUPPLY}!`);
 }
 
 // Function to issue new PiCoins
