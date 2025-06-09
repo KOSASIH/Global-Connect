@@ -1,0 +1,47 @@
+version: '3.8'
+
+services:
+  app:
+    image: global-connect-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+      - DB_HOST=db
+      - DB_PORT=5432
+      - DB_USER=${DB_USER}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - DB_NAME=${DB_NAME}
+      - STELLAR_NETWORK=testnet
+      - STELLAR_SECRET_KEY=${STELLAR_SECRET_KEY}
+      - STELLAR_PUBLIC_KEY=${STELLAR_PUBLIC_KEY}
+      - JWT_SECRET=${JWT_SECRET}
+      - JWT_EXPIRATION=1h
+    depends_on:
+      - db
+    volumes:
+      - .:/usr/src/app
+    networks:
+      - global-connect-network
+
+  db:
+    image: postgres:13
+    restart: always
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_NAME}
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    networks:
+      - global-connect-network
+
+networks:
+  global-connect-network:
+    driver: bridge
+
+volumes:
+  db_data:
