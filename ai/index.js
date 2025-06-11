@@ -45,7 +45,8 @@ module.exports = {
   currencyconverter: require('./currencyconverter/currencyconverter'),
   financereport: require('./financereport/financereport'),
   pipayments: require('./pipayments/pipayments'),
-  assetbadges: require('./assetbadinvestadvisor/investadvisor'),
+  assetbadges: require('./assetbadges/assetbadges'),
+  investadvisor: require('./investadvisor/investadvisor'),
   piexchange: require('./piexchange/piexchange'),
   piaml: require('./piaml/piaml'),
   pipricing: require('./pipricing/pipricing'),
@@ -98,7 +99,7 @@ module.exports = {
   aiAppBuilder: require('./aiappbuilder/aiappbuilder'),
   aiLowCodeBuilder: require('./ailowcodebuilder/ailowcodebuilder'),
   aiAutomationFlow: require('./aiautomationflow/aiautomationflow'),
-  aiAppTemplate: require('./aiapptemplate/aiappt'),
+  aiAppTemplate: require('./aiapptemplate/aiapptemplate'),
   aiSmartFormBuilder: require('./aismartformbuilder/aismartformbuilder'),
   aiApiBuilder: require('./aiapibuilder/aiapibuilder'),
   aiDocGen: require('./aidocgen/aidocgen'),
@@ -134,4 +135,11 @@ module.exports = {
   aiBankAPIGuard: require('./aibankapiguard/aibankapiguard'),
   aiGlobalFinMonitor: require('./aiglobalfinmonitor/aiglobalfinmonitor'),
   aiBankKYCAML: require('./aibankkycaml/aibankkycaml'),
+
+  // KYC & AML Dedicated Modules
+  aiKYCValidator: require('./aikycvalidator/aikycvalidator'),
+  aiKYCMonitor: require('./aikycmonitor/aikycmonitor'),
+  aiAutoKYC: require('./aiautokyc/aiautokyc'),
+  aiAutoKYCAML: require('./aiautokycaml/aiautokycaml'),
+  aiAMLMonitor: require('./aiamlmonitor/aiamlmonitor'),
 };
