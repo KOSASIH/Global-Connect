@@ -73,5 +73,10 @@ module.exports = {
   // Dual Value System modules
   dualvalue: require('./dualvalue/dualvalue'),
   dualvaluereport: require('./dualvalue/dualvaluereport'),
-  dualvalueai: require('./dualvalue/dualvalueai')
+  dualvalueai: require('./dualvalue/dualvalueai'),
+
+  // PiDualTx System Alignment modules
+  pidualtxsync: require('./pidualtxsync/pidualtxsync'),
+  pidualtxaudit: require('./pidualtxsync/pidualtxaudit'),
+  pidualtxsyncer: require('./pidualtxsync/pidualtxsyncer')
 };
