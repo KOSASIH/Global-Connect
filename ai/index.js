@@ -32,5 +32,12 @@ module.exports = {
   codegen: require('./codegen/codegen'),
   testgen: require('./testgen/testgen'),
   bugfixer: require('./bugfixer/bugfixer'),
-  docgen: require('./docgen/docgen')
+  docgen: require('./docgen/docgen'),
+
+  // Business-specific AI features
+  leadscorer: require('./leadscorer/leadscorer'),
+  meetingnotes: require('./meetingnotes/meetingnotes'),
+  churnpredictor: require('./churnpredictor/churnpredictor'),
+  contractanalyzer: require('./contractanalyzer/contractanalyzer'),
+  marketinsights: require('./marketinsights/marketinsights')
 };
