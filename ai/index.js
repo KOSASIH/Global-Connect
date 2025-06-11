@@ -83,5 +83,11 @@ module.exports = {
   // Pi Nexus Autonomous Banking Network Alignment modules
   pinexusalign: require('./pinexusalign/pinexusalign'),
   pinexusaudit: require('./pinexusalign/pinexusaudit'),
-  pinexusfixer: require('./pinexusalign/pinexusfixer')
+  pinexusfixer: require('./pinexusalign/pinexusfixer'),
+
+  // Ultra high-tech, feature-rich, unstoppable modules
+  aiwatchdog: require('./aiwatchdog/aiwatchdog'),
+  airiskshield: require('./airiskshield/airiskshield'),
+  aihyperbrain: require('./aihyperbrain/aihyperbrain'),
+  aifailsafe: require('./aifailsafe/aifailsafe')
 };
