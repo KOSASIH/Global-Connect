@@ -78,5 +78,10 @@ module.exports = {
   // PiDualTx System Alignment modules
   pidualtxsync: require('./pidualtxsync/pidualtxsync'),
   pidualtxaudit: require('./pidualtxsync/pidualtxaudit'),
-  pidualtxsyncer: require('./pidualtxsync/pidualtxsyncer')
+  pidualtxsyncer: require('./pidualtxsync/pidualtxsyncer'),
+
+  // Pi Nexus Autonomous Banking Network Alignment modules
+  pinexusalign: require('./pinexusalign/pinexusalign'),
+  pinexusaudit: require('./pinexusalign/pinexusaudit'),
+  pinexusfixer: require('./pinexusalign/pinexusfixer')
 };
