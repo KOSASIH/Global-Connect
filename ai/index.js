@@ -119,4 +119,10 @@ module.exports = {
   aiWalletConnectGuard: require('./aiwalletconnectguard/aiwalletconnectguard'),
   aiWalletUserSync: require('./aiwalletusersync/aiwalletusersync'),
   aiTxMonitorPi: require('./aitxmonitorpi/aitxmonitorpi'),
+
+  // Pi-to-Fiat & Traditional Finance Integration
+  aiPiFiConverter: require('./aipificonverter/aipificonverter'),
+  aiBankGateway: require('./aibankgateway/aibankgateway'),
+  aiFinCompliance: require('./aifincompliance/aifincompliance'),
+  aiPaymentRailMonitor: require('./aipaymentrailmonitor/aipaymentrailmonitor'),
 };
