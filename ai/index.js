@@ -45,8 +45,7 @@ module.exports = {
   currencyconverter: require('./currencyconverter/currencyconverter'),
   financereport: require('./financereport/financereport'),
   pipayments: require('./pipayments/pipayments'),
-  assetbadges: require('./assetbadges/assetbadges'),
-  investadvisor: require('./investadvisor/investadvisor'),
+  assetbadges: require('./assetbadinvestadvisor/investadvisor'),
   piexchange: require('./piexchange/piexchange'),
   piaml: require('./piaml/piaml'),
   pipricing: require('./pipricing/pipricing'),
@@ -99,7 +98,7 @@ module.exports = {
   aiAppBuilder: require('./aiappbuilder/aiappbuilder'),
   aiLowCodeBuilder: require('./ailowcodebuilder/ailowcodebuilder'),
   aiAutomationFlow: require('./aiautomationflow/aiautomationflow'),
-  aiAppTemplate: require('./aiapptemplate/aiapptemplate'),
+  aiAppTemplate: require('./aiapptemplate/aiappt'),
   aiSmartFormBuilder: require('./aismartformbuilder/aismartformbuilder'),
   aiApiBuilder: require('./aiapibuilder/aiapibuilder'),
   aiDocGen: require('./aidocgen/aidocgen'),
@@ -129,4 +128,10 @@ module.exports = {
   // Pi Purity Badge & Conversion at Fixed Value (1 Pi 🌟 = $314,159)
   aiPiPurityConverter: require('./aipipurityconverter/aipipurityconverter'),
   aiPiPurityBadgeValidator: require('./aipipuritybadgevalidator/aipipuritybadgevalidator'),
+
+  // Global Banking and Financial System Integration & Monitoring
+  aiGlobalBankConnect: require('./aiglobalbankconnect/aiglobalbankconnect'),
+  aiBankAPIGuard: require('./aibankapiguard/aibankapiguard'),
+  aiGlobalFinMonitor: require('./aiglobalfinmonitor/aiglobalfinmonitor'),
+  aiBankKYCAML: require('./aibankkycaml/aibankkycaml'),
 };
