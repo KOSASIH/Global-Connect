@@ -1,0 +1,19 @@
+openapi: 3.0.0
+info:
+  title: Global-Connect API
+  version: 1.0.0
+servers:
+  - url: http://localhost:4000
+paths:
+  /api/user:
+    get:
+      summary: Get user info
+      responses:
+        '200':
+          description: Success
+  /api/transaction:
+    post:
+      summary: Create transaction
+      responses:
+        '201':
+          description: Created
