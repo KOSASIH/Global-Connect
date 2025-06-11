@@ -125,4 +125,8 @@ module.exports = {
   aiBankGateway: require('./aibankgateway/aibankgateway'),
   aiFinCompliance: require('./aifincompliance/aifincompliance'),
   aiPaymentRailMonitor: require('./aipaymentrailmonitor/aipaymentrailmonitor'),
+
+  // Pi Purity Badge & Conversion at Fixed Value (1 Pi 🌟 = $314,159)
+  aiPiPurityConverter: require('./aipipurityconverter/aipipurityconverter'),
+  aiPiPurityBadgeValidator: require('./aipipuritybadgevalidator/aipipuritybadgevalidator'),
 };
