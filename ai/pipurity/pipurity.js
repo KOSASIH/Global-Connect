@@ -1,14 +1,14 @@
 const axios = require('axios');
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 
-// Allowed origins for internal ecosystem
+// Allowed origins for the internal ecosystem
 const ALLOWED_ORIGINS = [
-  "mining",         // hasil penambangan
-  "peer-to-peer",   // transfer antar pengguna (bukan exchange)
-  "contribution"    // reward/kontribusi pada proyek
+  "mining",         // mined Pi Coin
+  "peer-to-peer",   // direct user transfer (not from an exchange)
+  "contribution"    // project/reward contribution
 ];
 
-// Check if Pi Coin is eligible for Purify badge 🌟 and internal value
+// Check if Pi Coin is eligible for the Purify badge 🌟 and internal value
 async function checkPiPurity(piCoinInfo) {
   /**
    * piCoinInfo: {
@@ -23,38 +23,37 @@ async function checkPiPurity(piCoinInfo) {
   let eligible = false;
   let reason = "";
 
-  // Logic check: Only mined, P2P, or contribution, and never external exchange
+  // Only mined, P2P, or contribution, and never external exchange
   if (
     ALLOWED_ORIGINS.includes(piCoinInfo.origin) &&
     !piCoinInfo.everOnExternalExchange
   ) {
     eligible = true;
-    reason = "Pi Coin berasal dari " + piCoinInfo.origin +
-      " dan belum pernah ke bursa eksternal. Layak untuk Purify badge 🌟 dan dinilai 1 Pi = $314,159 secara internal.";
+    reason = `Pi Coin originated from ${piCoinInfo.origin} and has never been to an external exchange. Eligible for Purify badge 🌟 and valued at 1 Pi = $314,159 within the internal ecosystem.`;
   } else {
     eligible = false;
     if (!ALLOWED_ORIGINS.includes(piCoinInfo.origin)) {
-      reason = "Pi Coin bukan hasil mining, peer-to-peer, atau kontribusi.";
+      reason = "Pi Coin did not originate from mining, peer-to-peer, or contribution.";
     } else if (piCoinInfo.everOnExternalExchange) {
-      reason = "Pi Coin pernah masuk ke bursa eksternal, tidak layak untuk Purify badge 🌟.";
+      reason = "Pi Coin has been on an external exchange and is not eligible for the Purify badge 🌟.";
     } else {
-      reason = "Asal-usul Pi Coin tidak valid untuk ekosistem internal.";
+      reason = "Pi Coin origin is not valid for the internal ecosystem.";
     }
   }
 
-  // Optional: Use AI for further analysis of transaction history for complex cases
+  // Optional: Use AI for deeper transaction history analysis if needed
   if (piCoinInfo.txHistory && piCoinInfo.txHistory.length > 0) {
     const prompt = `
-Analisa riwayat transaksi berikut untuk sebuah Pi Coin.
-Kriteria untuk mendapatkan Purify badge (🌟) dan nilai 1 Pi = $314,159:
-- Pi Coin hanya hasil mining, peer-to-peer, atau kontribusi.
-- Tidak pernah masuk ke bursa eksternal.
-Riwayat transaksi:
+Analyze the following transaction history for a Pi Coin.
+Criteria for getting the Purify badge (🌟) and a value of 1 Pi = $314,159:
+- Pi Coin must originate only from mining, peer-to-peer, or contribution.
+- It must never have been to any external exchange.
+Transaction history:
 ${JSON.stringify(piCoinInfo.txHistory, null, 2)}
-Apakah Pi Coin ini layak mendapatkan Purify badge? Jelaskan alasannya secara singkat (Bahasa Indonesia boleh).
-Jawaban dalam format:
+Is this Pi Coin eligible for the Purify badge? Explain briefly.
+Answer format:
 eligible: true/false
-reason: <penjelasan>
+reason: <short explanation>
     `;
     const response = await axios.post(
       'https://api.openai.com/v1/chat/completions',
