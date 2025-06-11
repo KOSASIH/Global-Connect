@@ -1,79 +1,92 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 const TransactionForm = () => {
     const [destination, setDestination] = useState('');
     const [amount, setAmount] = useState('');
-    const [assetCode, setAssetCode] = useState('');
+    const [assetCode, setAssetCode] = useState('PI');
+    const [valueType, setValueType] = useState('internal');
+    const [rates, setRates] = useState({ internalValue: '', externalValue: '' });
     const [message, setMessage] = useState('');
     const [loading, setLoading] = useState(false);
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        setMessage(''); // Clear previous messages
-        setLoading(true); // Set loading state
+    useEffect(() => {
+        // Fetch dual value rates from backend
+        axios.get('/api/dualvalue/rates')
+            .then(res => setRates(res.data))
+            .catch(() => setRates({ internalValue: 'N/A', externalValue: 'N/A' }));
+    }, []);
 
-        // Input validation
+    Input validation
         if (!destination || !amount || !assetCode) {
             setMessage('All fields are required.');
             setLoading(false);
             return;
         }
+        if (Number(amount) <= 0) {
+            setMessage('Amount must be greater than zero.');
+            setLoading(false);
+            return;
+        }
 
         try {
-            const response = await axios.post('/api/transaction/create', {
-                destination,
-                amount,
-                assetCode,
-            }, {
-                headers: {
-                    Authorization: `Bearer ${localStorage.getItem('token')}`, // Assuming token is stored in localStorage
+            const response = await('token')}`,
                 },
             });
-            setMessage(`Transaction successful: ${response.data.id}`);
+
+            setMessage(`Transaction successful! TxID: ${response.data.id || response.data.txId || '[unknown]'}`);
+            setDestination('');
+            setAmount('');
+            setAssetCode('PI');
+            setValueType('internal');
         } catch (error) {
-            // Handle different error responses
             if (error.response) {
-                setMessage(`Transaction failed: ${error.response.data.message || 'Please try again.'}`);
+                setMessage(` || 'Please try again.'}`);
             } else {
                 setMessage('Transaction failed: Network error. Please try again later.');
             }
         } finally {
-            setLoading(false); // Reset loading state
+            setLoading(false);
         }
     };
 
     return (
         <div>
             <h2>Create Transaction</h2>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} autoComplete="off">
                 <div>
-                    <label>Destination:</label>
-                    <input 
-                        type="text" 
-                        value={destination} 
-                        onChange={(e) => setDestination(e.target.value)} 
-                        required 
+                    <label> setDestination(e.target.value)}
+                        required
+                        autoFocus
                     />
                 </div>
                 <div>
                     <label>Amount:</label>
-                    <input 
-                        type="number" 
-                        value={amount} 
-                        onChange={(e) => setAmount(e.target.value)} 
-                        required 
-                        min="0" // Ensure positive amount
+                    <input
+                        type="number"
+                        value={amount}
+                        onChange={e => setAmount(e.target.value)}
+                        required
+                        min="0.0000001"
+                        step="any"
+                    />
+                </div.target.value)}
+                        required
                     />
                 </div>
                 <div>
-                    <label>Asset Code:</label>
-                    <input 
-                        type="text" 
-                        value={assetCode} 
-                        onChange={(e) => setAssetCode(e.target.value)} 
-                        required 
-                    />
+                    <label>Value Type:</label>
+                    <select
+                        value={valueType}
+                        onChange={e => setValueType(e.target.value)}
+                    >
+                        <option value="internal">
+                            Internal (${rates.internalValue}/Pi)
+                        </option>
+                        <option value="external">
+                            External (~${rates.externalValue}/Pi)
+                        </option>
+                    </select>
                 </div>
                 <button type="submit" disabled={loading}>
                     {loading ? 'Processing...' : 'Submit'}
