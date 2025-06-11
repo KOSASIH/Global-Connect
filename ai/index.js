@@ -30,7 +30,11 @@ module.exports = {
   // Code and DApp builder AI features
   dappsbuilder: require('./dappsbuilder/dappsbuilder'),
   codegen: require('./codegen/codegen'),
-  testgen: require('./testgen/testgen // Business-specific AI features
+  testgen: require('./testgen/testgen'),
+  bugfixer: require('./bugfixer/bugfixer'),
+  docgen: require('./docgen/docgen'),
+
+  // Business-specific AI features
   leadscorer: require('./leadscorer/leadscorer'),
   meetingnotes: require('./meetingnotes/meetingnotes'),
   churnpredictor: require('./churnpredictor/churnpredictor'),
@@ -64,5 +68,10 @@ module.exports = {
   autorepair: require('./selfheal/autorepair'),
 
   // Purity check for Pi Coin (ENGLISH)
-  pipurity: require('./pipurity/pipurity')
+  pipurity: require('./pipurity/pipurity'),
+
+  // Dual Value System modules
+  dualvalue: require('./dualvalue/dualvalue'),
+  dualvaluereport: require('./dualvalue/dualvaluereport'),
+  dualvalueai: require('./dualvalue/dualvalueai')
 };
