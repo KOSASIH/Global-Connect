@@ -1,56 +1,79 @@
 module.exports = {
   // Core AI features
+  analytics: require('./analytics/analytics'),
   chatbot: require('./chatbot/chatbot'),
-  recommender: require('./recommendation/recommender'),
   moderation: require('./moderation/moderation'),
-  analytics: require  embedding: require('./embedding/embedding'),
-  ocr: require('./ocr/ocr'),
-  voice: require('./voice/voice-to-text'),
-  autocomplete: require('./autocomplete/autocomplete'),
-  imagegen: require('./imagegen/imagegen'),
-  faces: require('./faces/faces'),
-  spam: require('./spam/spam'),
-  personality: require('./personality/personality'),
-  intent: require('./intent/intent'),
+  recommender: require('./recommendation/recommender'),
+  search: require('./search/search'),
+  translation: require('./translation/translation'),
+  vision: require('./vision/vision'),
 
-  ///faqgen'),
-  priceoptimizer: require('./priceoptimizer/priceoptimizer'),
+  // Advanced AI features
+  autocomplete: require('./autocomplete/autocomplete'),
+  embedding: require('./embedding/embedding'),
+  faces: require('./faces/faces'),
+  imagegen: require('./imagegen/imagegen'),
+  intent: require('./intent/intent'),
+  ocr: require('./ocr/ocr'),
+  personality: require('./personality/personality'),
+  spam: require('./spam/spam'),
+  summarizer: require('./summarizer/summarizer'),
+  voice: require('./voice/voice-to-text'),
+
+  // E-commerce & business
+  faqgen: require('./faqgen/faqgen'),
   personalshopper: require('./personalshopper/personalshopper'),
+  priceoptimizer: require('./priceoptimizer/priceoptimizer'),
+  reviewanalyzer: require('./reviewanalyzer/reviewanalyzer'),
+  storebuilder: require('./storebuilder/storebuilder'),
 
   // Code and DApp builder
-  dappsbuilder: require('./dappsbuilder/dappsbuilder'),
+  bugfixer: require('./bugfixer/bugfixer'),
   codegen: require('./codegen/codegen'),
-('./notesnotes'),
+  dappsbuilder: require('./dappsbuilder/dappsbuilder'),
+  docgen: require('./docgen/docgen'),
+  testgen: require('./testgen/testgen'),
+
+  // Business-specific
   churnpredictor: require('./churnpredictor/churnpredictor'),
   contractanalyzer: require('./contractanalyzer/contractanalyzer'),
+  leadscorer: require('./leadscorer/leadscorer'),
   marketinsights: require('./marketinsights/marketinsights'),
+  meetingnotes: require('./meetingnotes/meetingnotes'),
 
   // Finance, Pi Coin, and exchange
-  currencyconverter: require('./currencyconverter/currencyinvestadvisor/investadvisor'),
-  piexchange: require('./piexchange/piexchange'),
+  assetbadges: require('./assetbadges/assetbadges'),
+  currencyconverter: require('./currencyconverter/currencyconverter'),
+  financereport: require('./financereport/financereport'),
+  investadvisor: require('./investadvisor/investadvisor'),
   piaml: require('./piaml/piaml'),
+  piexchange: require('./piexchange/piexchange'),
+  pilisting: require('./pilisting/pilisting'),
+  pipayments: require('./pipayments/pipayments'),
   pipricing: require('./pipricing/pipricing'),
   pitransparency: require('./pitransparency/pitransparency'),
-  pilisting: require('./pilisting/pilisting'),
 
   // PiBank modules
-  pibankaccount: require('./pibankaccount/pibankaccount('./pistatement/pistatement'),
+  pibankaccount: require('./pibankaccount/pibankaccount'),
   picard: require('./picard/picard'),
+  piloans: require('./piloans/piloans'),
+  pisavings: require('./pisavings/pisavings'),
+  pistatement: require('./pistatement/pistatement'),
 
   // Self-healing system modules
-  selfheal: require('./selfheal/selfheal'),
-  healthcheck: require('./selfheal/healthcheck'),
   autorepair: require('./selfheal/autorepair'),
+  healthcheck: require('./selfheal/healthcheck'),
+  selfheal: require('./selfheal/selfheal'),
 
   // Pi Coin purity and value systems
-  pipurity: require('./pipurity/pipurity'),
   dualvalue: require('./dualvalue/dualvalue'),
-  dualvaluereport: require('./dualvalue/dualvaluereport'),
   dualvalueai: require('./dualvalue/dualvalueai'),
+  dualvaluereport: require('./dualvalue/dualvaluereport'),
+  pipurity: require('./pipurity/pipurity'),
 
   // PiDualTx System Alignment
+  pidualtxaudit: require('./pidualtxsync/pidualtxaudit'),
   pidualtxsync: require('./pidualtxsync/pidualtxsync'),
-  pidualtxaudit: require('./'),
   pidualtxsyncer: require('./pidualtxsync/pidualtxsyncer'),
 
   // Pi Nexus Autonomous Banking Network Alignment
@@ -59,69 +82,76 @@ module.exports = {
   pinexusfixer: require('./pinexusalign/pinexusfixer'),
 
   // Security, compliance, unstoppable modules
-  aiwatchdog: require('./aiwatchdog/aiwatchdog'),
-  airiskshield: require('./airiskshield/airiskshield'),
-  aihyperbrain: require('./aihyperbrain/aihyperbrain'),
-  aifailsafe: require('./aifailsafe/aifailsafeaipolicyaudit/aipolicyaudit'),
-  aiActivity require('./aiactivitymonitor/aiactivitymonitor'),
+  aiActivityMonitor: require('./aiactivitymonitor/aiactivitymonitor'),
   aiAMLShield: require('./aiamlshield/aiamlshield'),
-  aiUserReputation: require('./aiuserreputation/aiuserreputation'),
-  aiTxPattern: require('./aitxpattern/aitxpattern'),
   aiComplianceAlert: require('./aicompliancealert/aicompliancealert'),
   aiDarkWebWatch: require('./aidarkwebwatch/aidarkwebwatch'),
+  aiFailsafe: require('./aifailsafe/aifailsafe'),
+  aiFraudShield: require('./aifraudshield/aifraudshield'),
+  aiHyperbrain: require('./aihyperbrain/aihyperbrain'),
+  aiPolicyAudit: require('./aipolicyaudit/aipolicyaudit'),
+  aiRiskShield: require('./airiskshield/airiskshield'),
+  aiTxPattern: require('./aitxpattern/aitxpattern'),
+  aiUserReputation: require('./aiuserreputation/aiuserreputation'),
+  aiWatchdog: require('./aiwatchdog/aiwatchdog'),
 
   // Advanced app, automation, workflow, and code/documentation builders
-  aiAppBuilder: require('./aiappbuilder/aiappbuilder'),
-  aiLowCodeBuilder: require('./ailowcodebuilder/ailowcodebuilder'),
-  aiAutomationFlow: require('./aiautomationflow/aiautomationflow'),
-  aiAppTemplate: require('./aiapptemplate/aiapptemplate'),
-  aiSmartFormBuilder: require('./aismartformbuilder/aismartformbuilder'),
   aiApiBuilder: require('./aiapibuilder/aiapibuilder'),
+  aiAppBuilder: require('./aiappbuilder/aiappbuilder'),
+  aiAppTemplate: require('./aiapptemplate/aiapptemplate'),
+  aiAutomationFlow: require('./aiautomationflow/aiautomationflow'),
   aiDocGen: require('./aidocgen/aidocgen'),
+  aiLowCodeBuilder: require('./ailowcodebuilder/ailowcodebuilder'),
+  aiSmartFormBuilder: require('./aismartformbuilder/aismartformbuilder'),
   aiWorkflowBuilder: require('./aiworkflowbuilder/aiworkflowbuilder'),
 
   // DAO Builder
   aiDAOBuilder: require('./aidaobuilder/aidaobuilder'),
 
   // Advanced Security Modules
-  aiThreatDetection: require('./aithreatdetection/aithreatdetection'),
-  aiPhishingGuard: require('./aiphishingguard/aiphishingguard'),
   aiMalwareMonitor: require('./aimalwaremonitor/aimalwaremonitor'),
   aiPermissionSentry: require('./aipermissionsentry/aipermissionsentry'),
+  aiPhishingGuard: require('./aiphishingguard/aiphishingguard'),
+  aiThreatDetection: require('./aithreatdetection/aithreatdetection'),
 
   // Pi Network & Wallet Connect Alignment
   aiPiNetworkSync: require('./aipinetworksync/aipinetworksync'),
+  aiTxMonitorPi: require('./aitxmonitorpi/aitxmonitorpi'),
   aiWalletConnectGuard: require('./aiwalletconnectguard/aiwalletconnectguard'),
   aiWalletUserSync: require('./aiwalletusersync/aiwalletusersync'),
-  aiTxMonitorPi: require('./aitxmonitorpi/aitxmonitorpi'),
 
   // Pi-to-Fiat & Traditional Finance Integration
-  aiPiFiConverter: require('./aipificonverter/aipificonverter'),
   aiBankGateway: require('./aibankgateway/aibankgateway'),
   aiFinCompliance: require('./aifincompliance/aifincompliance'),
   aiPaymentRailMonitor: require('./aipaymentrailmonitor/aipaymentrailmonitor'),
+  aiPiFiConverter: require('./aipificonverter/aipificonverter'),
 
   // Pi Purity Badge & Conversion at Fixed Value (1 Pi 🌟 = $314,159)
-  aiPiPurityConverter: require('./aipipurityconverter/aipipurityconverter'),
   aiPiPurityBadgeValidator: require('./aipipuritybadgevalidator/aipipuritybadgevalidator'),
+  aiPiPurityConverter: require('./aipipurityconverter/aipipurityconverter'),
 
   // Global Banking and Financial System Integration & Monitoring
-  aiGlobalBankConnect: require('./aiglobalbankconnect/aiglobalbankconnect'),
-  aiBankAPIGuard: require('./aibankapiguard/aibankapiguard'),
-  aiGlobalFinMonitor: require('./aiglobalfinmonitor/aiglobalfinmonitor'),
   aiBankKYCAML: require('./aibankkycaml/aibankkycaml'),
+  aiGlobalBankConnect: require('./aiglobalbankconnect/aiglobalbankconnect'),
+  aiGlobalFinMonitor: require('./aiglobalfinmonitor/aiglobalfinmonitor'),
+  aiBankAPIGuard: require('./aibankapiguard/aibankapiguard'),
 
   // KYC & AML Dedicated Modules
-  aiKYCValidator: require('./aikycvalidator/aikycvalidator'),
-  aiKYCMonitor: require('./aikycmonitor/aikycmonitor'),
+  aiAMLMonitor: require('./aiamlmonitor/aiamlmonitor'),
   aiAutoKYC: require('./aiautokyc/aiautokyc'),
   aiAutoKYCAML: require('./aiautokycaml/aiautokycaml'),
-  aiAMLMonitor: require('./aiamlmonitor/aiamlmonitor'),
+  aiKYCMonitor: require('./aikycmonitor/aikycmonitor'),
+  aiKYCValidator: require('./aikycvalidator/aikycvalidator'),
 
   // Ultra High-Tech Features
+  aiComplianceCopilot: require('./aicompliancecopilot/aicompliancecopilot'),
   aiComplianceDAO: require('./aicompliancedao/aicompliancedao'),
-  aiPrivacyFederated: require('./aiprivacyfederated/aiprivacyfederated'),
   aiDAppBuilder: require('./aidappbuilder/aidappbuilder'),
-  aiGlobalRegIntel: require('./aiglobalregintel/aiglobalregintel'),
   aiDigitalTwin: require('./aidigitaltwin/aidigitaltwin'),
+  aiGlobalRegIntel: require('./aiglobalregintel/aiglobalregintel'),
+  aiLiquidityRouter: require('./ailiquidityrouter/ailiquidityrouter'),
+  aiMultimodalHelpdesk: require('./aimultimodalhelpdesk/aimultimodalhelpdesk'),
+  aiPrivacyFederated: require('./aiprivacyfederated/aiprivacyfederated'),
+  aiQuantumSecure: require('./aiquantumsecure/aiquantumsecure'),
+  aiTrustEngine: require('./aitrustengine/aitrustengine'),
 };
