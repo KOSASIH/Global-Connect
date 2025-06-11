@@ -6,8 +6,6 @@ module.exports = {
   translation: require('./translation/translation'),
   search: require('./search/search'),
   vision: require('./vision/vision'),
-
-  // Additional AI features:
   summarizer: require('./summarizer/summarizer'),
   embedding: require('./embedding/embedding'),
   ocr: require('./ocr/ocr'),
@@ -18,4 +16,9 @@ module.exports = {
   spam: require('./spam/spam'),
   personality: require('./personality/personality'),
   intent: require('./intent/intent'),
+  storebuilder: require('./storebuilder/storebuilder'),
+  reviewanalyzer: require('./reviewanalyzer/reviewanalyzer'),
+  faqgen: require('./faqgen/faqgen'),
+  priceoptimizer: require('./priceoptimizer/priceoptimizer'),
+  personalshopper: require('./personalshopper/personalshopper')
 };
