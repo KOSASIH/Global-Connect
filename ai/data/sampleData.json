@@ -1,0 +1,37 @@
+[
+  {
+    "transactionId": "abc123",
+    "amount": 1500,
+    "currency": "USD",
+    "userId": "user_001",
+    "timestamp": "2025-06-10T12:00:00Z"
+  },
+  {
+    "transactionId": "def456",
+    "amount": 500,
+    "currency": "USD",
+    "userId": "user_002",
+    "timestamp": "2025-06-10T12:.yaml`
+**OpenAPI spec starter**
+
+```yaml
+openapi: 3.0.0
+info:
+  title: Global-Connect API
+  version: 1.0.0
+servers:
+  - url: http://localhost:4000
+paths:
+  /api/user:
+    get:
+      summary: Get user info
+      responses:
+        '200':
+          description: Success
+  / suspicious transactions', () => {
+    const result = complianceCopilot.analyze({
+      transactionDetails: 'Transfer of $10,000 to offshore account'
+    });
+    expect(result.flags).toContain('offshore');
+  });
+});
