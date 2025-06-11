@@ -39,5 +39,12 @@ module.exports = {
   meetingnotes: require('./meetingnotes/meetingnotes'),
   churnpredictor: require('./churnpredictor/churnpredictor'),
   contractanalyzer: require('./contractanalyzer/contractanalyzer'),
-  marketinsights: require('./marketinsights/marketinsights')
+  marketinsights: require('./marketinsights/marketinsights'),
+
+  // Finance and Pi Coin AI features
+  currencyconverter: require('./currencyconverter/currencyconverter'),
+  financereport: require('./financereport/financereport'),
+  pipayments: require('./pipayments/pipayments'),
+  assetbadges: require('./assetbadges/assetbadges'),
+  investadvisor: require('./investadvisor/investadvisor')
 };
