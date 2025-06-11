@@ -28,7 +28,15 @@ module.exports = {
   personalshopper: require('./personalshopper/personalshopper'),
 
   // Code and DApp builder AI features
-  dappsbuilder: require('.//meetingnotes'),
+  dappsbuilder: require('./dappsbuilder/dappsbuilder'),
+  codegen: require('./codegen/codegen'),
+  testgen: require('./testgen/testgen'),
+  bugfixer: require('./bugfixer/bugfixer'),
+  docgen: require('./docgen/docgen'),
+
+  // Business-specific AI features
+  leadscorer: require('./leadscorer/leadscorer'),
+  meetingnotes: require('./meetingnotes/meetingnotes'),
   churnpredictor: require('./churnpredictor/churnpredictor'),
   contractanalyzer: require('./contractanalyzer/contractanalyzer'),
   marketinsights: require('./marketinsights/marketinsights'),
@@ -40,8 +48,15 @@ module.exports = {
   assetbadges: require('./assetbadges/assetbadges'),
   investadvisor: require('./investadvisor/investadvisor'),
 
-  require('./piaml/piaml'),
+  ///piaml'),
   pipricing: require('./pipricing/pipricing'),
   pitransparency: require('./pitransparency/pitransparency'),
-  pilisting: require('./pilisting/pilisting')
+  pilisting: require('./pilisting/pilisting'),
+
+  // PiBank modules
+  pibankaccount: require('./pibankaccount/pibankaccount'),
+  piloans: require('./piloans/piloans'),
+  pisavings: require('./pisavings/pisavings'),
+  pistatement: require('./pistatement/pistatement'),
+  picard: require('./picard/picard')
 };
