@@ -103,4 +103,7 @@ module.exports = {
   aiApiBuilder: require('./aiapibuilder/aiapibuilder'),
   aiDocGen: require('./aidocgen/aidocgen'),
   aiWorkflowBuilder: require('./aiworkflowbuilder/aiworkflowbuilder'),
+
+  // DAO Builder
+  aiDAOBuilder: require('./aidaobuilder/aidaobuilder'),
 };
