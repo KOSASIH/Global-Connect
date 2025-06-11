@@ -48,7 +48,9 @@ module.exports = {
   assetbadges: require('./assetbadges/assetbadges'),
   investadvisor: require('./investadvisor/investadvisor'),
 
-  ///piaml'),
+  // Ultra high-tech Pi Coin exchange modules (Purify badge only)
+  piexchange: require('./piexchange/piexchange'),
+  piaml: require('./piaml/piaml'),
   pipricing: require('./pipricing/pipricing'),
   pitransparency: require('./pitransparency/pitransparency'),
   pilisting: require('./pilisting/pilisting'),
@@ -58,5 +60,10 @@ module.exports = {
   piloans: require('./piloans/piloans'),
   pisavings: require('./pisavings/pisavings'),
   pistatement: require('./pistatement/pistatement'),
-  picard: require('./picard/picard')
+  picard: require('./picard/picard'),
+
+  // Self-healing system modules for Global Connect
+  selfheal: require('./selfheal/selfheal'),
+  healthcheck: require('./selfheal/healthcheck'),
+  autorepair: require('./selfheal/autorepair')
 };
