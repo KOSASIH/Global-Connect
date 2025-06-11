@@ -30,11 +30,7 @@ module.exports = {
   // Code and DApp builder AI features
   dappsbuilder: require('./dappsbuilder/dappsbuilder'),
   codegen: require('./codegen/codegen'),
-  testgen: require('./testgen/testgen'),
-  bugfixer: require('./bugfixer/bugfixer'),
-  docgen: require('./docgen/docgen'),
-
-  // Business-specific AI features
+  testgen: require('./testgen/testgen // Business-specific AI features
   leadscorer: require('./leadscorer/leadscorer'),
   meetingnotes: require('./meetingnotes/meetingnotes'),
   churnpredictor: require('./churnpredictor/churnpredictor'),
@@ -65,5 +61,8 @@ module.exports = {
   // Self-healing system modules for Global Connect
   selfheal: require('./selfheal/selfheal'),
   healthcheck: require('./selfheal/healthcheck'),
-  autorepair: require('./selfheal/autorepair')
+  autorepair: require('./selfheal/autorepair'),
+
+  // Purity check for Pi Coin (ENGLISH)
+  pipurity: require('./pipurity/pipurity')
 };
