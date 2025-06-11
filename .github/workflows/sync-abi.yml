@@ -1,0 +1,36 @@
+name: Sync PiDualTx ABI
+
+on:
+  schedule:
+    - cron: '0 2 * * *'          # Runs daily at 2:00 UTC. Adjust as needed.
+  workflow_dispatch:              # Allows manual triggering from GitHub UI.
+
+jobs:
+  abi-sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Global-Connect repo
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'      # Use LTS or required version
+
+      - name: Fetch latest ABI from PiDualTx
+        run: |
+          mkdir -p smart_contracts
+          curl -sSL https://raw.githubusercontent.com/KOSASIH/PiDualTx/main/build/DualValueSystem.abi.json -o smart_contracts/DualValueSystem.abi.json
+
+      - name: Commit and push if ABI updated
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          if git diff --quiet smart_contracts/DualValueSystem.abi.json; then
+            echo "No changes in ABI, nothing to commit."
+          else
+            git add smart_contracts/DualValueSystem.abi.json
+            git commit -m "chore: sync ABI from PiDualTx"
+            git push
+          fi
