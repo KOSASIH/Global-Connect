@@ -100,7 +100,7 @@ See [API Documentation](docs/API_Documentation.md) for all endpoints, authentica
 
 ## Contributing
 
-We welcome contributions from visionaries, developers, and researchers! Read our [Contributing Guide](docs/contributing.md) to get started.
+We welcome contributions from visionaries, developers, and researchers! Read our [Contributing Guide](docs/CONTRIBUTING.md) to get started.
 
 ---
 
