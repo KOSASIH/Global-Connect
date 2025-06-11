@@ -15,7 +15,30 @@ module.exports = {
   voice: require('./voice/voice-to-text'),
   autocomplete: require('./autocomplete/autocomplete'),
   imagegen: require('./imagegen/imagegen'),
-  faces: require('./faces('./contractanalyzer/contractanalyzer'),
+  faces: require('./faces/faces'),
+  spam: require('./spam/spam'),
+  personality: require('./personality/personality'),
+  intent: require('./intent/intent'),
+
+  // E-commerce & business
+  storebuilder: require('./storebuilder/storebuilder'),
+  reviewanalyzer: require('./reviewanalyzer/reviewanalyzer'),
+  faqgen: require('./faqgen/faqgen'),
+  priceoptimizer: require('./priceoptimizer/priceoptimizer'),
+  personalshopper: require('./personalshopper/personalshopper'),
+
+  // Code and DApp builder
+  dappsbuilder: require('./dappsbuilder/dappsbuilder'),
+  codegen: require('./codegen/codegen'),
+  testgen: require('./testgen/testgen'),
+  bugfixer: require('./bugfixer/bugfixer'),
+  docgen: require('./docgen/docgen'),
+
+  // Business-specific
+  leadscorer: require('./leadscorer/leadscorer'),
+  meetingnotes: require('./meetingnotes/meetingnotes'),
+  churnpredictor: require('./churnpredictor/churnpredictor'),
+  contractanalyzer: require('./contractanalyzer/contractanalyzer'),
   marketinsights: require('./marketinsights/marketinsights'),
 
   // Finance, Pi Coin, and exchange
@@ -24,9 +47,16 @@ module.exports = {
   pipayments: require('./pipayments/pipayments'),
   assetbadges: require('./assetbadges/assetbadges'),
   investadvisor: require('./investadvisor/investadvisor'),
-  piexchange: require('./piexchange/piexpibankaccount/pibankaccount'),
-  piloans: require('./piloans/p'),
-: require('./pisavings/pisavings'),
+  piexchange: require('./piexchange/piexchange'),
+  piaml: require('./piaml/piaml'),
+  pipricing: require('./pipricing/pipricing'),
+  pitransparency: require('./pitransparency/pitransparency'),
+  pilisting: require('./pilisting/pilisting'),
+
+  // PiBank modules
+  pibankaccount: require('./pibankaccount/pibankaccount'),
+  piloans: require('./piloans/piloans'),
+  pisavings: require('./pisavings/pisavings'),
   pistatement: require('./pistatement/pistatement'),
   picard: require('./picard/picard'),
 
@@ -51,7 +81,7 @@ module.exports = {
   pinexusaudit: require('./pinexusalign/pinexusaudit'),
   pinexusfixer: require('./pinexusalign/pinexusfixer'),
 
-  // Security, compliance, and unstoppable modules
+  // Security, compliance, unstoppable modules
   aiwatchdog: require('./aiwatchdog/aiwatchdog'),
   airiskshield: require('./airiskshield/airiskshield'),
   aihyperbrain: require('./aihyperbrain/aihyperbrain'),
@@ -83,4 +113,10 @@ module.exports = {
   aiPhishingGuard: require('./aiphishingguard/aiphishingguard'),
   aiMalwareMonitor: require('./aimalwaremonitor/aimalwaremonitor'),
   aiPermissionSentry: require('./aipermissionsentry/aipermissionsentry'),
+
+  // Pi Network & Wallet Connect Alignment
+  aiPiNetworkSync: require('./aipinetworksync/aipinetworksync'),
+  aiWalletConnectGuard: require('./aiwalletconnectguard/aiwalletconnectguard'),
+  aiWalletUserSync: require('./aiwalletusersync/aiwalletusersync'),
+  aiTxMonitorPi: require('./aitxmonitorpi/aitxmonitorpi'),
 };
