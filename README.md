@@ -60,6 +60,16 @@
 [![University of Melbourne](https://img.shields.io/badge/University%20of%20Melbourne-Partner-FFB300.svg)](https://www.unimelb.edu.au/)
 [![ETH Zurich](https://img.shields.io/badge/ETH%20Zurich-Partner-34C759.svg)](https://ethz.ch/en.html)
 
+[![International Association for Cryptologic Research](https://img.shields.io/badge/IACR-Partner-0072B8.svg)](https://www.iacr.org/)
+[![European Union Agency for Cybersecurity](https://img.shields.io/badge/ENISA-Partner-003DA5.svg)](https://www.enisa.europa.eu/)
+[![Center for Internet Security](https://img.shields.io/badge/CIS-Partner-34C759.svg)](https://www.cisecurity.org/)
+[![Internet Engineering Task Force](https://img.shields.io/badge/IETF-Partner-FF5733.svg)](https://www.ietf.org/)
+[![SANS Institute](https://img.shields.io/badge/SANS%20Institute-Partner-00A3E0.svg)](https://www.sans.org/)
+[![National Cyber Security Centre](https://img.shields.io/badge/NCSC-Partner-007A33.svg)](https://www.ncsc.gov.uk/)
+[![Cybersecurity and Infrastructure Security Agency](https://img.shields.io/badge/CISA-Partner-FFB300.svg)](https://www.cisa.gov/)
+[![Global Cyber Alliance](https://img.shields.io/badge/Global%20Cyber%20Alliance-Partner-34C759.svg)](https://www.globalcyberalliance.org/)
+[![Internet Society](https://img.shields.io/badge/Internet%20Society-Partner-FF6F20.svg)](https://www.internetsociety.org/)
+
 <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/KOSASIH/Global-Connect">Global Connect</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://www.linkedin.com/in/kosasih-81b46b5a">KOSASIH</a> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Creative Commons Attribution 4.0 International<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""></a></p>
 
 # Global Connect
