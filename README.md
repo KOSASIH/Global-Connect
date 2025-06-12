@@ -1,3 +1,5 @@
+[![CodeQL Advanced](https://github.com/KOSASIH/Global-Connect/actions/workflows/codeql.yml/badge.svg)](https://github.com/KOSASIH/Global-Connect/actions/workflows/codeql.yml)
+
 [![World Bank](https://img.shields.io/badge/World%20Bank-Partner-34C759.svg)](https://www.worldbank.org/)
 [![IMF](https://img.shields.io/badge/IMF-Partner-0072B8.svg)](https://www.imf.org/)
 [![OECD](https://img.shields.io/badge/OECD-Partner-FF6F20.svg)](https://www.oecd.org/)
