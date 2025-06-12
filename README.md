@@ -50,6 +50,15 @@
 [![University of Chicago](https://img.shields.io/badge/University%20of%20Chicago-Partner-00A3E0.svg)](https://www.uchicago.edu/)
 [![Columbia University](https://img.shields.io/badge/Columbia%20University-Partner-007A33.svg)](https://www.columbia.edu/)
 [![Yale University](https://img.shields.io/badge/Yale%20University-Partner-FFB300.svg)](https://www.yale.edu/)
+[![Princeton University](https://img.shields.io/badge/Princeton%20University-Partner-FF6F20.svg)](https://www.princeton.edu/)
+[![University of California, Berkeley](https://img.shields.io/badge/University%20of%20California%2C%20Berkeley-Partner-0072B8.svg)](https://www.berkeley.edu/)
+[![University of Toronto](https://img.shields.io/badge/University%20of%20Toronto-Partner-003DA5.svg)](https://www.utoronto.ca/)
+[![University of Michigan](https://img.shields.io/badge/University%20of%20Michigan-Partner-34C759.svg)](https://umich.edu/)
+[![University of Edinburgh](https://img.shields.io/badge/University%20of%20Edinburgh-Partner-FF5733.svg)](https://www.ed.ac.uk/)
+[![University of Tokyo](https://img.shields.io/badge/University%20of%20Tokyo-Partner-00A3E0.svg)](https://www.u-tokyo.ac.jp/en/)
+[![National University of Singapore](https://img.shields.io/badge/National%20University%20of%20Singapore-Partner-007A33.svg)](https://www.nus.edu.sg/)
+[![University of Melbourne](https://img.shields.io/badge/University%20of%20Melbourne-Partner-FFB300.svg)](https://www.unimelb.edu.au/)
+[![ETH Zurich](https://img.shields.io/badge/ETH%20Zurich-Partner-34C759.svg)](https://ethz.ch/en.html)
 
 <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/KOSASIH/Global-Connect">Global Connect</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://www.linkedin.com/in/kosasih-81b46b5a">KOSASIH</a> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Creative Commons Attribution 4.0 International<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""></a></p>
 
