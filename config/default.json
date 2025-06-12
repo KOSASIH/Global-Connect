@@ -1,0 +1,26 @@
+{
+  "server": {
+    "port": 3000
+  },
+  "database": {
+    "host": "localhost",
+    "port": 5432,
+    "user": "",
+    "password": "",
+    "name": "global_connect_db"
+  },
+  "stellar": {
+    " },
+  "jwt": {
+    "expiration": "1h"
+  },
+  "email": {
+    "service": "",
+    "user": "",
+    "password": ""
+  },
+  "ai": {
+    "googleCredentials": ""
+  },
+  "nodeEnv": "development"
+}
