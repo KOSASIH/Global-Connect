@@ -1,4 +1,4 @@
-w[![World Bank](https://img.shields.io/badge/World%20Bank-Partner-34C759.svg)](https://www.worldbank.org/)
+[![World Bank](https://img.shields.io/badge/World%20Bank-Partner-34C759.svg)](https://www.worldbank.org/)
 [![IMF](https://img.shields.io/badge/IMF-Partner-0072B8.svg)](https://www.imf.org/)
 [![OECD](https://img.shields.io/badge/OECD-Partner-FF6F20.svg)](https://www.oecd.org/)
 [![UN](https://img.shields.io/badge/UN-Partner-007A33.svg)](https://www.un.org/)
