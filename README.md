@@ -1,4 +1,4 @@
-[![World Bank](https://img.shields.io/badge/World%20Bank-Partner-34C759.svg)](https://www.worldbank.org/)
+w[![World Bank](https://img.shields.io/badge/World%20Bank-Partner-34C759.svg)](https://www.worldbank.org/)
 [![IMF](https://img.shields.io/badge/IMF-Partner-0072B8.svg)](https://www.imf.org/)
 [![OECD](https://img.shields.io/badge/OECD-Partner-FF6F20.svg)](https://www.oecd.org/)
 [![UN](https://img.shields.io/badge/UN-Partner-007A33.svg)](https://www.un.org/)
@@ -13,6 +13,16 @@
 [![Financial Stability Board](https://img.shields.io/badge/Financial%20Stability%20Board-Partner-34C759.svg)](https://www.fsb.org/)
 [![G20](https://img.shields.io/badge/G20-Partner-FF6F20.svg)](https://g20.org/)
 [![Basel Committee on Banking Supervision](https://img.shields.io/badge/Basel%20Committee%20on%20Banking%20Supervision-Partner-007A33.svg)](https://www.bis.org/bcbs/)
+[![International Finance Corporation](https://img.shields.io/badge/International%20Finance%20Corporation-Partner-0072B8.svg)](https://www.ifc.org/)
+[![European Investment Bank](https://img.shields.io/badge/European%20Investment%20Bank-Partner-003DA5.svg)](https://www.eib.org/)
+[![Development Bank of Latin America](https://img.shields.io/badge/Development%20Bank%20of%20Latin%20America-Partner-FF6F20.svg)](https://www.caf.com/en/)
+[![Council of Europe Development Bank](https://img.shields.io/badge/Council%20of%20Europe%20Development%20Bank-Partner-34C759.svg)](https://coebank.org/)
+[![International Fund for Agricultural Development](https://img.shields.io/badge/International%20Fund%20for%20Agricultural%20Development-Partner-FF5733.svg)](https://www.ifad.org/)
+[![Green Climate Fund](https://img.shields.io/badge/Green%20Climate%20Fund-Partner-00A3E0.svg)](https://www.greenclimate.fund/)
+[![United Nations Conference on Trade and Development](https://img.shields.io/badge/UNCTAD-Partner-007A33.svg)](https://unctad.org/)
+[![International Development Association](https://img.shields.io/badge/International%20Development%20Association-Partner-FFB300.svg)](https://www.worldbank.org/en/who-we-are/what-is-the-ida)
+[![African Export-Import Bank](https://img.shields.io/badge/African%20Export--Import%20Bank-Partner-FF6F20.svg)](https://www.afreximbank.com/)
+
 
 <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/KOSASIH/Global-Connect">Global Connect</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://www.linkedin.com/in/kosasih-81b46b5a">KOSASIH</a> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Creative Commons Attribution 4.0 International<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""></a></p>
 
