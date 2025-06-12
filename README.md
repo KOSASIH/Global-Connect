@@ -4,6 +4,15 @@
 [![UN](https://img.shields.io/badge/UN-Partner-007A33.svg)](https://www.un.org/)
 [![BIS](https://img.shields.io/badge/BIS-Partner-FFB300.svg)](https://www.bis.org/)
 [![FATF](https://img.shields.io/badge/FATF-Partner-FF5733.svg)](https://www.fatf-gafi.org/)
+[![Asian Development Bank](https://img.shields.io/badge/Asian%20Development%20Bank-Partner-00A3E0.svg)](https://www.adb.org/)
+[![European Central Bank](https://img.shields.io/badge/European%20Central%20Bank-Partner-003DA5.svg)](https://www.ecb.europa.eu/)
+[![World Trade Organization](https://img.shields.io/badge/World%20Trade%20Organization-Partner-FF6F20.svg)](https://www.wto.org/)
+[![International Finance Corporation](https://img.shields.io/badge/International%20Finance%20Corporation-Partner-0072B8.svg)](https://www.ifc.org/)
+[![African Development Bank](https://img.shields.io/badge/African%20Development%20Bank-Partner-FFB300.svg)](https://www.afdb.org/)
+[![Inter-American Development Bank](https://img.shields.io/badge/Inter--American%20Development%20Bank-Partner-FF5733.svg)](https://www.iadb.org/)
+[![Financial Stability Board](https://img.shields.io/badge/Financial%20Stability%20Board-Partner-34C759.svg)](https://www.fsb.org/)
+[![G20](https://img.shields.io/badge/G20-Partner-FF6F20.svg)](https://g20.org/)
+[![Basel Committee on Banking Supervision](https://img.shields.io/badge/Basel%20Committee%20on%20Banking%20Supervision-Partner-007A33.svg)](https://www.bis.org/bcbs/)
 
 <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/KOSASIH/Global-Connect">Global Connect</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://www.linkedin.com/in/kosasih-81b46b5a">KOSASIH</a> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Creative Commons Attribution 4.0 International<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""></a></p>
 
