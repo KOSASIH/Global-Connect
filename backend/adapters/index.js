@@ -2,23 +2,21 @@ const WooCommerceAdapter = require('./WooCommerceAdapter');
 const AmazonAdapter = require('./AmazonAdapter');
 const ShopifyAdapter = require('./ShopifyAdapter');
 const MagentoAdapter = require('./MagentoAdapter');
+const BigCommerceAdapter = require('./BigCommerceAdapter');
+const OpenCartAdapter = require('./OpenCartAdapter');
+const PrestaShopAdapter = require('./PrestaShopAdapter');
 
 function getAdapter(platform, config) {
     switch (platform.toLowerCase()) {
         case "woocommerce": return new WooCommerceAdapter(config);
         case "amazon": return new AmazonAdapter(config);
-        case "shopify": return new Shopify```
+        case "shopify": return new ShopifyAdapter(config);
+        case "magento": return new MagentoAdapter(config);
+        case "bigcommerce": return new BigCommerceAdapter(config);
+        case "opencart": return new OpenCartAdapter(config);
+        case "prestashop": return new PrestaShopAdapter(config);
+        default: throw new Error(`No adapter implemented for: ${platform}`);
+    }
+}
 
----
-
-## 4. **How to Use**
-
-Add your platform configuration in your backend (e.g., `server.js` or a config file):
-
-```js
-const PLATFORM_CONFIGS = {
-    woocommerce: { /* ... */ },
-    amazon: { /* ... */ },
-    shopify: { shop: "your-shop.myshopify.com", accessToken: "shpat_..." },
-    magento: { apiBase: "https://your-magento.com", accessToken: "..." }
-};
+module.exports = { getAdapter };
