@@ -31,6 +31,15 @@
 [![International Renewable Energy Agency](https://img.shields.io/badge/IRENA-Partner-007A33.svg)](https://www.irena.org/)
 [![Global Green Growth Institute](https://img.shields.io/badge/Global%20Green%20Growth%20Institute-Partner-34C759.svg)](https://gggi.org/)
 [![International Organization for Migration](https://img.shields.io/badge/International%20Organization%20for%20Migration-Partner-FF6F20.svg)](https://www.iom.int/)
+[![International Finance Facility for Immunisation](https://img.shields.io/badge/International%20Finance%20Facility%20for%20Immunisation-Partner-0072B8.svg)](https://www.iffim.org/)
+[![Global Environment Facility](https://img.shields.io/badge/Global%20Environment%20Facility-Partner-34C759.svg)](https://www.thegef.org/)
+[![International Labour Organization](https://img.shields.io/badge/International%20Labour%20Organization-Partner-FF5733.svg)](https://www.ilo.org/)
+[![United Nations Children's Fund](https://img.shields.io/badge/UNICEF-Partner-00A3E0.svg)](https://www.unicef.org/)
+[![World Health Organization](https://img.shields.io/badge/World%20Health%20Organization-Partner-007A33.svg)](https://www.who.int/)
+[![International Telecommunication Union](https://img.shields.io/badge/International%20Telecommunication%20Union-Partner-FFB300.svg)](https://www.itu.int/)
+[![World Meteorological Organization](https://img.shields.io/badge/World%20Meteorological%20Organization-Partner-003DA5.svg)](https://public.wmo.int/en)
+[![International Maritime Organization](https://img.shields.io/badge/International%20Maritime%20Organization-Partner-34C759.svg)](https://www.imo.org/)
+[![United Nations Educational, Scientific and Cultural Organization](https://img.shields.io/badge/UNESCO-Partner-FF6F20.svg)](https://en.unesco.org/)
 
 <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/KOSASIH/Global-Connect">Global Connect</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://www.linkedin.com/in/kosasih-81b46b5a">KOSASIH</a> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Creative Commons Attribution 4.0 International<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""></a></p>
 
