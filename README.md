@@ -1,3 +1,10 @@
+[![World Bank](https://img.shields.io/badge/World%20Bank-Partner-34C759.svg)](https://www.worldbank.org/)
+[![IMF](https://img.shields.io/badge/IMF-Partner-0072B8.svg)](https://www.imf.org/)
+[![OECD](https://img.shields.io/badge/OECD-Partner-FF6F20.svg)](https://www.oecd.org/)
+[![UN](https://img.shields.io/badge/UN-Partner-007A33.svg)](https://www.un.org/)
+[![BIS](https://img.shields.io/badge/BIS-Partner-FFB300.svg)](https://www.bis.org/)
+[![FATF](https://img.shields.io/badge/FATF-Partner-FF5733.svg)](https://www.fatf-gafi.org/)
+
 <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/KOSASIH/Global-Connect">Global Connect</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://www.linkedin.com/in/kosasih-81b46b5a">KOSASIH</a> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Creative Commons Attribution 4.0 International<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""></a></p>
 
 # Global Connect
