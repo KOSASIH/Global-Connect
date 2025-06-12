@@ -14,6 +14,9 @@ const SFCCAdapter = require('./SFCCAdapter'); // Salesforce Commerce Cloud
 const ZohoCommerceAdapter = require('./ZohoCommerceAdapter');
 const WeeblyAdapter = require('./WeeblyAdapter');
 const WooCommerceRestAdapter = require('./WooCommerceRestAdapter');
+const LightspeedAdapter = require('./LightspeedAdapter');
+const NetSuiteAdapter = require('./NetSuiteAdapter');
+const SAPHybrisAdapter = require('./SAPHybisAdapter');
 
 function getAdapter(platform, config) {
     switch (platform.toLowerCase()) {
@@ -33,6 +36,9 @@ function getAdapter(platform, config) {
         case "zoho":                return new ZohoCommerceAdapter(config);
         case "weebly":              return new WeeblyAdapter(config);
         case "woocommercerest":     return new WooCommerceRestAdapter(config);
+        case "lightspeed":          return new LightspeedAdapter(config);
+        case "netsuite":            return new NetSuiteAdapter(config);
+        case "saphybris":           return new SAPHybrisAdapter(config);
         default:
             throw new Error(`No adapter implemented for: ${platform}`);
     }
