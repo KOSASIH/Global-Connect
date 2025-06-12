@@ -41,6 +41,16 @@
 [![International Maritime Organization](https://img.shields.io/badge/International%20Maritime%20Organization-Partner-34C759.svg)](https://www.imo.org/)
 [![United Nations Educational, Scientific and Cultural Organization](https://img.shields.io/badge/UNESCO-Partner-FF6F20.svg)](https://en.unesco.org/)
 
+[![Harvard University](https://img.shields.io/badge/Harvard%20University-Partner-A50000.svg)](https://www.harvard.edu/)
+[![Massachusetts Institute of Technology](https://img.shields.io/badge/Massachusetts%20Institute%20of%20Technology-Partner-FF6F20.svg)](https://www.mit.edu/)
+[![Stanford University](https://img.shields.io/badge/Stanford%20University-Partner-0072B8.svg)](https://www.stanford.edu/)
+[![University of Cambridge](https://img.shields.io/badge/University%20of%20Cambridge-Partner-003DA5.svg)](https://www.cam.ac.uk/)
+[![University of Oxford](https://img.shields.io/badge/University%20of%20Oxford-Partner-34C759.svg)](https://www.ox.ac.uk/)
+[![California Institute of Technology](https://img.shields.io/badge/California%20Institute%20of%20Technology-Partner-FF5733.svg)](https://www.caltech.edu/)
+[![University of Chicago](https://img.shields.io/badge/University%20of%20Chicago-Partner-00A3E0.svg)](https://www.uchicago.edu/)
+[![Columbia University](https://img.shields.io/badge/Columbia%20University-Partner-007A33.svg)](https://www.columbia.edu/)
+[![Yale University](https://img.shields.io/badge/Yale%20University-Partner-FFB300.svg)](https://www.yale.edu/)
+
 <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/KOSASIH/Global-Connect">Global Connect</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://www.linkedin.com/in/kosasih-81b46b5a">KOSASIH</a> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Creative Commons Attribution 4.0 International<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""></a></p>
 
 # Global Connect
