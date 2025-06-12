@@ -22,7 +22,15 @@
 [![United Nations Conference on Trade and Development](https://img.shields.io/badge/UNCTAD-Partner-007A33.svg)](https://unctad.org/)
 [![International Development Association](https://img.shields.io/badge/International%20Development%20Association-Partner-FFB300.svg)](https://www.worldbank.org/en/who-we-are/what-is-the-ida)
 [![African Export-Import Bank](https://img.shields.io/badge/African%20Export--Import%20Bank-Partner-FF6F20.svg)](https://www.afreximbank.com/)
-
+[![International Development Bank](https://img.shields.io/badge/Inter--American%20Development%20Bank-Partner-0072B8.svg)](https://www.iadb.org/)
+[![Caribbean Development Bank](https://img.shields.io/badge/Caribbean%20Development%20Bank-Partner-34C759.svg)](https://www.caribank.org/)
+[![New Development Bank](https://img.shields.io/badge/New%20Development%20Bank-Partner-FF5733.svg)](https://ndb.int/)
+[![Eurasian Development Bank](https://img.shields.io/badge/Eurasian%20Development%20Bank-Partner-00A3E0.svg)](https://eabr.org/en/)
+[![Asia Infrastructure Investment Bank](https://img.shields.io/badge/Asia%20Infrastructure%20Investment%20Bank-Partner-003DA5.svg)](https://www.aiib.org/)
+[![Sustainable Development Goals](https://img.shields.io/badge/Sustainable%20Development%20Goals-Partner-FFB300.svg)](https://sdgs.un.org/)
+[![International Renewable Energy Agency](https://img.shields.io/badge/IRENA-Partner-007A33.svg)](https://www.irena.org/)
+[![Global Green Growth Institute](https://img.shields.io/badge/Global%20Green%20Growth%20Institute-Partner-34C759.svg)](https://gggi.org/)
+[![International Organization for Migration](https://img.shields.io/badge/International%20Organization%20for%20Migration-Partner-FF6F20.svg)](https://www.iom.int/)
 
 <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/KOSASIH/Global-Connect">Global Connect</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://www.linkedin.com/in/kosasih-81b46b5a">KOSASIH</a> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Creative Commons Attribution 4.0 International<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""></a></p>
 
