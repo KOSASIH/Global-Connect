@@ -70,6 +70,16 @@
 [![Global Cyber Alliance](https://img.shields.io/badge/Global%20Cyber%20Alliance-Partner-34C759.svg)](https://www.globalcyberalliance.org/)
 [![Internet Society](https://img.shields.io/badge/Internet%20Society-Partner-FF6F20.svg)](https://www.internetsociety.org/)
 
+[![Federal Bureau of Investigation](https://img.shields.io/badge/Federal%20Bureau%20of%20Investigation-Partner-0072B8.svg)](https://www.fbi.gov/)
+[![Interpol](https://img.shields.io/badge/Interpol-Partner-003DA5.svg)](https://www.interpol.int/)
+[![Europol](https://img.shields.io/badge/Europol-Partner-34C759.svg)](https://www.europol.europa.eu/)
+[![United Nations Office on Drugs and Crime](https://img.shields.io/badge/UNODC-Partner-FF5733.svg)](https://www.unodc.org/)
+[![World Customs Organization](https://img.shields.io/badge/World%20Customs%20Organization-Partner-00A3E0.svg)](http://www.w3.org/)
+[![Security and Exchange Commission](https://img.shields.io/badge/SEC-Partner-007A33.svg)](https://www.sec.gov/)
+[![National Security Agency](https://img.shields.io/badge/National%20Security%20Agency-Partner-FFB300.svg)](https://www.nsa.gov/)
+[![Department of Homeland Security](https://img.shields.io/badge/Department%20of%20Homeland%20Security-Partner-34C759.svg)](https://www.dhs.gov/)
+[![Global Counterterrorism Forum](https://img.shields.io/badge/Global%20Counterterrorism%20Forum-Partner-FF6F20.svg)](https://www.thegctf.org/)
+
 <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/KOSASIH/Global-Connect">Global Connect</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://www.linkedin.com/in/kosasih-81b46b5a">KOSASIH</a> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Creative Commons Attribution 4.0 International<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""></a></p>
 
 # Global Connect
