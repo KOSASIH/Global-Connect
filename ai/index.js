@@ -148,7 +148,7 @@ module.exports = {
   aiComplianceDAO: require('./aicompliancedao/aicompliancedao'),
   aiDAppBuilder: require('./aidappbuilder/aidappbuilder'),
   aiDigitalTwin: require('./aidigitaltwin/aidigitaltwin'),
-  aiGlobalRegIntel: require('./aiglobalregintel/aiglobalregintel'),
+  aiGlobalRegIntel: require('./aiglobalregintel/aiglobalregintel'), // <<-- NEW FEATURE
   aiLiquidityRouter: require('./ailiquidityrouter/ailiquidityrouter'),
   aiMultimodalHelpdesk: require('./aimultimodalhelpdesk/aimultimodalhelpdesk'),
   aiPrivacyFederated: require('./aiprivacyfederated/aiprivacyfederated'),
