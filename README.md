@@ -1,4 +1,5 @@
 [![CodeQL Advanced](https://github.com/KOSASIH/Global-Connect/actions/workflows/codeql.yml/badge.svg)](https://github.com/KOSASIH/Global-Connect/actions/workflows/codeql.yml)
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/KOSASIH/Global-Connect/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/KOSASIH/Global-Connect/tree/main)
 
 [![World Bank](https://img.shields.io/badge/World%20Bank-Partner-34C759.svg)](https://www.worldbank.org/)
 [![IMF](https://img.shields.io/badge/IMF-Partner-0072B8.svg)](https://www.imf.org/)
