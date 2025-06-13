@@ -106,7 +106,7 @@ module.exports = {
   aiWorkflowBuilder: require('./aiworkflowbuilder/aiworkflowbuilder'),
 
   // DAO Builder
-  aiDAOBuilder: require('./aidaobuilder/aidaobuilder'), // already present, keep here
+  aiDAOBuilder: require('./aidaobuilder/aidaobuilder'),
 
   // Advanced Security Modules
   aiMalwareMonitor: require('./aimalwaremonitor/aimalwaremonitor'),
@@ -149,10 +149,17 @@ module.exports = {
   aiDAppBuilder: require('./aidappbuilder/aidappbuilder'),
   aiDigitalTwin: require('./aidigitaltwin/aidigitaltwin'),
   aiGlobalRegIntel: require('./aiglobalregintel/aiglobalregintel'),
-  aiGlobalRiskAnalytics: require('./aiglobalriskanalytics/aiglobalriskanalytics'), // NEW
+  aiGlobalRiskAnalytics: require('./aiglobalriskanalytics/aiglobalriskanalytics'),
   aiLiquidityRouter: require('./ailiquidityrouter/ailiquidityrouter'),
   aiMultimodalHelpdesk: require('./aimultimodalhelpdesk/aimultimodalhelpdesk'),
   aiPrivacyFederated: require('./aiprivacyfederated/aiprivacyfederated'),
-  aiQuantumSecure: require('./aiquantumsecure/aiquantumsecure'), // NEW
+  aiQuantumSecure: require('./aiquantumsecure/aiquantumsecure'),
   aiTrustEngine: require('./aitrustengine/aitrustengine'),
+
+  // Quantum Pi Network Integration
+  aiQuantumTxValidator: require('./aiquantumtxvalidator/aiquantumtxvalidator'),
+  aiQuantumEntanglementAudit: require('./aiquantumentanglementaudit/aiquantumentanglementaudit'),
+  aiQuantumKeyManager: require('./aiquantumkeymanager/aiquantumkeymanager'),
+  aiQuantumConsensus: require('./aiquantumconsensus/aiquantumconsensus'),
+  aiQuantumRandomness: require('./aiquantumrandomness/aiquantumrandomness'),
 };
