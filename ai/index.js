@@ -106,7 +106,7 @@ module.exports = {
   aiWorkflowBuilder: require('./aiworkflowbuilder/aiworkflowbuilder'),
 
   // DAO Builder
-  aiDAOBuilder: require('./aidaobuilder/aidaobuilder'),
+  aiDAOBuilder: require('./aidaobuilder/aidaobuilder'), // already present, keep here
 
   // Advanced Security Modules
   aiMalwareMonitor: require('./aimalwaremonitor/aimalwaremonitor'),
@@ -148,10 +148,11 @@ module.exports = {
   aiComplianceDAO: require('./aicompliancedao/aicompliancedao'),
   aiDAppBuilder: require('./aidappbuilder/aidappbuilder'),
   aiDigitalTwin: require('./aidigitaltwin/aidigitaltwin'),
-  aiGlobalRegIntel: require('./aiglobalregintel/aiglobalregintel'), // <<-- NEW FEATURE
+  aiGlobalRegIntel: require('./aiglobalregintel/aiglobalregintel'),
+  aiGlobalRiskAnalytics: require('./aiglobalriskanalytics/aiglobalriskanalytics'), // NEW
   aiLiquidityRouter: require('./ailiquidityrouter/ailiquidityrouter'),
   aiMultimodalHelpdesk: require('./aimultimodalhelpdesk/aimultimodalhelpdesk'),
   aiPrivacyFederated: require('./aiprivacyfederated/aiprivacyfederated'),
-  aiQuantumSecure: require('./aiquantumsecure/aiquantumsecure'),
+  aiQuantumSecure: require('./aiquantumsecure/aiquantumsecure'), // NEW
   aiTrustEngine: require('./aitrustengine/aitrustengine'),
 };
