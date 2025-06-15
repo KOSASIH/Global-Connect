@@ -27,6 +27,12 @@ module.exports = {
   reviewanalyzer: require('./reviewanalyzer/reviewanalyzer'),
   storebuilder: require('./storebuilder/storebuilder'),
 
+  // Ultra High-Tech Southeast Asia Marketplace Integrations
+  seaMarketplaceSync: require('./seaMarketplaceSync/seaMarketplaceSync'),
+  seaMarketplaceInsights: require('./seaMarketplaceInsights/seaMarketplaceInsights'),
+  seaMarketplaceChatbot: require('./seaMarketplaceChatbot/seaMarketplaceChatbot'),
+  seaMarketplacePriceOptimizer: require('./seaMarketplacePriceOptimizer/seaMarketplacePriceOptimizer'),
+
   // Code and DApp builder
   bugfixer: require('./bugfixer/bugfixer'),
   codegen: require('./codegen/codegen'),
