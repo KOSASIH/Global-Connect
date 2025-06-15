@@ -2,101 +2,51 @@
 
 const express = require('express');
 const router = express.Router();
+const fs = require('fs');
+const path = require('path');
 
-// Regulatory Intelligence
-const airegulatoryintel = require('./airegulatoryintel/airegulatoryintel');
-router.post('/airegulatoryintel', async (req, res) => {
-  try {
-    const result = await airegulatoryintel(req.body);
-    res.json({ result });
-  } catch (e) {
-    res.status(400).json({ error: e.message });
-  }
-});
+/**
+ * Dynamically auto-register all AI modules in the ai/ folder and subfolders as POST endpoints.
+ * Example: ai/airegulatoryintel/airegulatoryintel.js => POST /airegulatoryintel/airegulatoryintel
+ * Example: ai/quantum/entanglementAudit.js => POST /quantum/entanglementAudit
+ */
+function registerModuleRoutes(dir, baseRoute = '') {
+  fs.readdirSync(dir).forEach(file => {
+    const fullPath = path.join(dir, file);
 
-// Quantum Entanglement Wallet Audit
-const aiQuantumEntanglementAudit = require('./aiquantumentanglementaudit/aiquantumentanglementaudit');
-router.post('/aiquantumentanglementaudit', async (req, res) => {
-  try {
-    const result = await aiQuantumEntanglementAudit(req.body);
-    res.json({ result });
-  } catch (e) {
-    res.status(400).json({ error: e.message });
-  }
-});
+    if (fs.statSync(fullPath).isDirectory()) {
+      // Recursively register routes for subdirectories
+      registerModuleRoutes(fullPath, baseRoute + '/' + file);
+    } else if (file.endsWith('.js') && !file.startsWith('_')) {
+      const mod = require(fullPath);
+      const routePath = (baseRoute + '/' + file.replace('.js', '')).replace(/\\/g, '/');
+      router.post(routePath, async (req, res) => {
+        try {
+          // Allow modules to optionally handle the full (req, res) signature for advanced use
+          if (mod.length >= 2) {
+            // Module expects (body, req, res)
+            await mod(req.body, req, res);
+          } else {
+            const result = await mod(req.body);
+            res.json({ result });
+          }
+        } catch (e) {
+          console.error(`[${routePath}] Error:`, e);
+          res.status(400).json({ error: e.message || 'Unknown error' });
+        }
+      });
+    }
+  });
+}
 
-// Quantum Key Manager
-const aiQuantumKeyManager = require('./aiquantumkeymanager/aiquantumkeymanager');
-router.post('/aiquantumkeymanager', async (req, res) => {
-  try {
-    const result = await aiQuantumKeyManager(req.body);
-    res.json({ result });
-  } catch (e) {
-    res.status(400).json({ error: e.message });
-  }
-});
+// Register all modules in the ai/ directory (relative to this file)
+registerModuleRoutes(__dirname);
 
-// Quantum Consensus Analyzer
-const aiQuantumConsensus = require('./aiquantumconsensus/aiquantumconsensus');
-router.post('/aiquantumconsensus', async (req, res) => {
-  try {
-    const result = await aiQuantumConsensus(req.body);
-    res.json({ result });
-  } catch (e) {
-    res.status(400).json({ error: e.message });
-  }
-});
+// Health-check endpoint
+router.get('/health', (req, res) => res.json({ status: 'ok', ts: Date.now() }));
 
-// SEA Marketplace Integrations
-const seaMarketplaceSync = require('./seaMarketplaceSync/seaMarketplaceSync');
-router.post('/seaMarketplaceSync', async (req, res) => {
-  try {
-    const result = await seaMarketplaceSync(req.body);
-    res.json({ result });
-  } catch (e) {
-    res.status(400).json({ error: e.message });
-  }
-});
-
-const seaMarketplaceInsights = require('./seaMarketplaceInsights/seaMarketplaceInsights');
-router.post('/seaMarketplaceInsights', async (req, res) => {
-  try {
-    const result = await seaMarketplaceInsights(req.body);
-    res.json({ result });
-  } catch (e) {
-    res.status(400).json({ error: e.message });
-  }
-});
-
-const seaMarketplaceChatbot = require('./seaMarketplaceChatbot/seaMarketplaceChatbot');
-router.post('/seaMarketplaceChatbot', async (req, res) => {
-  try {
-    const result = await seaMarketplaceChatbot(req.body);
-    res.json({ result });
-  } catch (e) {
-    res.status(400).json({ error: e.message });
-  }
-});
-
-const seaMarketplacePriceOptimizer = require('./seaMarketplacePriceOptimizer/seaMarketplacePriceOptimizer');
-router.post('/seaMarketplacePriceOptimizer', async (req, res) => {
-  try {
-    const result = await seaMarketplacePriceOptimizer(req.body);
-    res.json({ result });
-  } catch (e) {
-    res.status(400).json({ error: e.message });
-  }
-});
-
-// Example for adding more AI modules in the same style
-// const someModule = require('./somemodule/somemodule');
-// router.post('/somemodule', async (req, res) => {
-//   try {
-//     const result = await someModule(req.body);
-//     res.json({ result });
-//   } catch (e) {
-//     res.status(400).json({ error: e.message });
-//   }
-// });
+// Example: add custom routes as needed
+// const customModule = require('./customModule');
+// router.post('/customEndpoint', async (req, res) => { ... });
 
 module.exports = router;
