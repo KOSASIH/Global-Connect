@@ -1,3 +1,5 @@
+// ai/index.js
+
 module.exports = {
   // Core AI features
   analytics: require('./analytics/analytics'),
@@ -168,4 +170,11 @@ module.exports = {
   aiQuantumKeyManager: require('./aiquantumkeymanager/aiquantumkeymanager'),
   aiQuantumConsensus: require('./aiquantumconsensus/aiquantumconsensus'),
   aiQuantumRandomness: require('./aiquantumrandomness/aiquantumrandomness'),
+
+  // Next-generation Banking, Simulation, AR, and Reward modules
+  aiCentralBank: require('./aiCentralBank/aiCentralBank'),
+  stabilityEngine: require('./stabilityEngine/stabilityEngine'),
+  policySimulator: require('./policySimulator/policySimulator'),
+  arPayments: require('./arPayments/arPayments'),
+  rewardOptimizer: require('./rewardOptimizer/rewardOptimizer'),
 };
