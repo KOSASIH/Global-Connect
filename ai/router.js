@@ -12,26 +12,33 @@ const path = require('path');
  */
 function registerModuleRoutes(dir, baseRoute = '') {
   fs.readdirSync(dir).forEach(file => {
+    if (file.startsWith('_')) return; // skip hidden/system files
     const fullPath = path.join(dir, file);
 
     if (fs.statSync(fullPath).isDirectory()) {
       // Recursively register routes for subdirectories
       registerModuleRoutes(fullPath, baseRoute + '/' + file);
-    } else if (file.endsWith('.js') && !file.startsWith('_')) {
-      const mod = require(fullPath);
-      const routePath = (baseRoute + '/' + file.replace('.js', '')).replace(/\\/g, '/');
+    } else if (file.endsWith('.js')) {
+      // Build route path (normalize for Windows/Unix)
+      const routePath = (baseRoute + '/' + file.replace(/\.js$/, '')).replace(/\\/g, '/');
+      // Prevent double-registration
+      if (router.stack.some(r => r.route && r.route.path === routePath && r.route.methods.post)) return;
+      // Lazy-load for hot-reload environments
       router.post(routePath, async (req, res) => {
         try {
-          // Allow modules to optionally handle the full (req, res) signature for advanced use
-          if (mod.length >= 2) {
-            // Module expects (body, req, res)
+          // Dynamic require for latest code (avoids cache issues)
+          const mod = require(fullPath);
+          // If module expects (body, req, res), call with those
+          if (typeof mod === 'function' && mod.length >= 2) {
             await mod(req.body, req, res);
-          } else {
+          } else if (typeof mod === 'function') {
             const result = await mod(req.body);
             res.json({ result });
+          } else {
+            throw new Error('Module export is not a function');
           }
         } catch (e) {
-          console.error(`[${routePath}] Error:`, e);
+          console.error(`[AI ROUTER][${routePath}] Error:`, e);
           res.status(400).json({ error: e.message || 'Unknown error' });
         }
       });
