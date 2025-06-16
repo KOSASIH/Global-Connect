@@ -1,0 +1,81 @@
+openapi: 3.0.0
+info:
+  title: Global Connect Ultra API
+  version: 2.0.0
+servers:
+  - url: https://api.globalconnect.com/v1
+paths:
+  /partners/status:
+    get:
+      summary: Get partner integration status
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Partner status and metadata
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  partnerId:
+                    type: string
+                  status:
+                    type: string
+                  adoptionScore:
+                    type: integer
+                  lastCheck:
+                    type: string
+  /webhooks/register:
+    post:
+      summary: Register a webhook for partner events
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                events:
+                  type: array
+                  items:
+                    type: string
+                url:
+                  type: string
+      responses:
+        '200':
+          description: Registration result
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+  /partners/analytics:
+    get:
+      summary: Get analytics for partner
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Analytics data
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  adoptionTrend:
+                    type: array
+                    items:
+                      type: integer
+                  errors:
+                    type: integer
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
