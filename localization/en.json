@@ -1,0 +1,16 @@
+{
+  "dashboard_title": "Global Connect Dashboard",
+  "welcome": "Welcome to Global Connect",
+  "onboarding_complete": "Onboarding complete!",
+  "integration_error": "Integration error detected.",
+  "sla_breach": "Performance SLA breached.",
+  "partner_status": "Partner Status",
+  "adoption": "Adoption Score",
+  "last_activity": "Last Activity",
+  "recent_events": "Recent Events",
+  "api_key": "API Key",
+  "webhook_registered": "Webhook registered successfully.",
+  "analytics": "Analytics",
+  "compliance_clear": "Compliance: Clear",
+  "compliance_flagged": "Compliance: Issue Detected"
+}
