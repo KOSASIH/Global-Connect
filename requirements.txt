@@ -1,0 +1,19 @@
+# Core blockchain dependencies
+web3>=6.0.0
+
+# Async HTTP clients
+aiohttp you use them)
+fastapi>=0.110.0
+uvicorn[standard]>=0.29.0
+
+# For testing
+pytest>=8.2.0
+pytest-asyncio>=0.23.0
+
+# If you use e-commerce APIs (requests for REST clients)
+requests>=2.31.0
+
+# Cryptography for non-EVM wallets (Solana, Cosmos, etc.)
+cryptography ```
+
+Let me know if you want a `requirements-dev.txt`, a `Pipfile`, or want to pin all versions for production!
