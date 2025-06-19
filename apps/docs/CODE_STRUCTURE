@@ -1,0 +1,43 @@
+Global-Connect/
+├── apps/                        # Main directory for contributed apps
+│   ├── README.md                # Guidelines for app submissions & category explanations
+│   ├── defi/                    # Decentralized Finance apps
+│   │   ├── example_defi_app/
+│   │   │   ├── __init__.py
+│   │   │   ├── app_main.py
+│   │   │   ├── requirements.txt
+│   │   │   └── README.md
+│   │   └── <your_defi_app>/
+│   ├── gaming/                  # Blockchain gaming & NFT apps
+│   │   └── <your_gaming_app>/
+│   ├── ecommerce/               # E-commerce, shops, payment, POS
+│   │   └── <your_ecommerce_app>/
+│   ├── ai/                      # AI-powered dapps, analytics, bots
+│   │   └── <your_ai_app>/
+│   ├── identity/                # Identity, KYC, reputation, SSO
+│   │   └── <your_identity_app>/
+│   ├── social/                  # Social, DAO, messaging, community
+│   │   └── <your_social_app>/
+│   ├── infrastructure/          # Oracles, bridges, wallets, tooling
+│   │   └── <your_infra_app>/
+│   ├── example_app/             # General example/template app
+│   │   ├── __init__.py
+│   │   ├── app_main.py
+│   │   ├── requirements.txt
+│   │   └── README.md
+│   └── <misc_or_new_category>/  # For new or uncategorized apps
+├── core/                        # Core framework and blockchain logic
+│   ├── blockchain/
+│   ├── ai/
+│   └── ...
+├── docs/                        # Documentation
+│   └── contributing.md
+├── tests/                       # Test suites
+│   └── ...
+├── .github/
+│   ├── ISSUE_TEMPLATE/
+│   ├── PULL_REQUEST_TEMPLATE.md
+│   └── workflows/
+├── requirements.txt             # Root requirements (for platform core)
+├── README.md                    # Project overview & starter docs
+└── CONTRIBUTING.md              # Contribution guidelines
