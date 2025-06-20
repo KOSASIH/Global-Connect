@@ -72,4 +72,30 @@ connector = PiAutoConnector(
 asyncio.run(connector.run())
 ```
 
+ 🛡️ Security Best Practices
 
+- Never commit or expose your API keys.
+- Always use HTTPS endpoints for both Pi API and OpenAI.
+- Validate all AI-generated connection parameters before using them in production.
+- Review and restrict network/firewall settings as appropriate for your deployment.
+
+---
+
+## 🐞 Troubleshooting
+
+- **Connection Issues:**  
+  - Check your API keys andING.md](../../../../CONTRIBUTING.md) for full guidelines.
+
+---
+
+## 📚 References
+
+- [Pi Network Developer Docs](https://minepi.com/developers/)
+- [OpenAI API Reference](https://platform.openai.com/docs/api-reference)
+- [Global-Connect Main Repo](https://github.com/KOSASIH/Global-Connect)
+
+---
+
+## 💬 Questions or Ideas?
+
+Open an issue
