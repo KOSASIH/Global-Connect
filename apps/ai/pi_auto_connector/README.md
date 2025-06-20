@@ -92,6 +92,17 @@ export PI_API_KEY="your-pi-api-key"
 export OPENAI_API_KEY="your-openai-api-key"
 ```
 
+## 🧠 Extending the Connector
+
+The Pi Auto Connector is designed to be easily extended and customized for advanced integration scenarios or new requirements.
+
+### Add New AI Capabilities
+
+- **Custom AI Models or Prompts:**  
+  Modify or extend prompts in `ai_agent.py` to use different models (OpenAI, open-source LLMs) or to adapt to new orchestration and troubleshooting strategies.
+
+- **Advanced AI Workflows:**-documented, making it simple to integrate new logic or connect to external systems!
+
 ## 🛡️ Security Best Practices
 
 - Never commit or expose your API keys.
