@@ -114,9 +114,24 @@ The Pi Auto Connector is designed to be easily extended and customized for advan
 
 ## 🐞 Troubleshooting
 
-- **Connection Issues:**  
-  - Check your API keys andING.md](../../../../CONTRIBUTING.md) for full guidelines.
+If you encounter issues while using the Pi Auto Connector, consult the following tips:
 
+### Connection Issues
+
+- **Invalid API Keys or URLs:**  
+  Double-check that `PI_API_KEY`, `PI_API_BASE`, and `OPENAI_API_KEY` are set correctly.
+- **Network Problems:**  
+  Ensure your server/network allows outbound connections to both the Pi Network API and OpenAI endpoints.
+- **SSL/TLS Errors:**  
+  Always use HTTPS in your API and the nodes are actually online.
+
+### Scaling and Performance
+
+- **Too Many Open Connections / Resource Exhaustion:**  
+  Tune `node_discovery_interval` and `health_check_interval` to match your system’s capacity.
+- **Slow Performance:**  
+  Run on a machine with sufficient CPU and memory. Consider increasing Python's asyncio and httpx concurrency
+  
 ---
 
 ## 📚 References
