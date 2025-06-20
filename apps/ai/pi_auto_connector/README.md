@@ -72,7 +72,27 @@ connector = PiAutoConnector(
 asyncio.run(connector.run())
 ```
 
- 🛡️ Security Best Practices
+## 🛠️ Configuration
+
+You can configure the Pi Auto Connector using environment variables and/or by passing parameters directly to the `PiAutoConnector` class.
+
+### Environment Variables
+
+| Variable Name        | Description                                    | Example Value                           |
+|----------------------|------------------------------------------------|-----------------------------------------|
+| `PI_API_BASE`        | Base URL for your Pi Network API provider      | `https://api.minepi.com`                |
+| `PI_API_KEY`         | Access token for the Pi API                    | `your-pi-api-key`                       |
+| `OPENAI_API_KEY`     | API key for OpenAI (GPT-4/4o or compatible)    | `your-openai-api-key`                   |
+
+Set them in your shell using:
+
+```bash
+export PI_API_BASE="https://your-pi-network-api"
+export PI_API_KEY="your-pi-api-key"
+export OPENAI_API_KEY="your-openai-api-key"
+```
+
+## 🛡️ Security Best Practices
 
 - Never commit or expose your API keys.
 - Always use HTTPS endpoints for both Pi API and OpenAI.
