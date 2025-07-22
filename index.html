@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Connect - The Future of Digital Currency</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #000428, #004e92);
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            transition: background 0.5s;
+            background-image: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0');
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        header {
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            backdrop-filter: blur(10px);
+        }
+
+        h1 {
+            font-size: 3.5em;
+            margin: 0;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+        }
+
+        p {
+            font-size: 1.5em;
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav a {
+            color: #e94560;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #d83d50;
+        }
+
+        .btn {
+            background-color: #e94560;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #d83d50;
+            transform: scale(1.05);
+        }
+
+        section {
+            padding: 50px 20px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+
+        .feature-list {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .feature-item {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px;
+            width: 30%;
+            transition: transform 0.3s;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .feature-item:hover {
+            transform: scale(1.05);
+        }
+
+        .dashboard-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px;
+            width: 30%;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .modal-content {
+            background-color: #1a1a2e;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #e94560;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        footer {
+            padding: 20px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #e94560;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            display: none;
+            z-index: 1000;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .feature-item, .card {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Global Connect</h1>
+            <p>Your gateway to the future of digital currency.</p>
+            <nav>
+                <ul>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#dashboard">Dashboard</a></li>
+                    <li><a href="#news">News</a></li>
+                    <li><a href="#forum">Forum</a></li>
+                    <li><a href="#tutorials">Tutorials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <a href="#login" class="btn">Login</a>
+                <a href="#signup" class="btn">Sign Up</a>
+                <a href="https://wallet.pinet.com" class="btn" target="_blank">Connect Wallet</a>
+                <button id="toggle-theme" class="btn">Toggle Dark/Light Mode</button>
+            </div>
+        </div>
+    </header>
+
+    <section id="features" data-aos="fade-up">
+        <h2>Key Features</h2>
+        <div class="feature-list">
+            <div class="feature-item">
+                <i class="fas fa-shield-alt fa-3x"></i>
+                <h3>Unmatched Security</h3>
+                <p>Utilizes advanced encryption and smart contracts for secure transactions.</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-robot fa-3x"></i>
+                <h3>AI-Powered Trading Insights</h3>
+                <p>Get personalized insights based on your trading patterns.</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-chart-line fa-3x"></i>
+                <h3>Machine Learning Price Prediction</h3>
+                <p>Predict future cryptocurrency prices using historical data.</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-binoculars fa-3x"></i>
+                <h3>Blockchain Explorer</h3>
+                <p>View transactions on the blockchain in real-time.</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-wallet fa-3x"></i>
+                <h3>Multi-Currency Wallet</h3>
+                <p>Manage multiple cryptocurrencies in a single wallet interface.</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-university fa-3x"></i>
+                <h3>DeFi Integration</h3>
+                <p>Access lending, borrowing, and yield farming services.</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-file-alt fa-3x"></i>
+                <h3>NFT Marketplace</h3>
+                <p>Create, buy, and sell non-fungible tokens (NFTs).</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-lock fa-3x"></i>
+                <h3>Advanced Security Features</h3>
+                <p>Biometric authentication and hardware wallet integration.</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-chart-pie fa-3x"></i>
+                <h3>Market Sentiment Analysis</h3>
+                <p>Analyze social media and news sentiment for market insights.</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-th fa-3x"></i>
+                <h3>Customizable Dashboard</h3>
+                <p>Personalize your dashboard layout and themes.</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-microphone fa-3x"></i>
+                <h3>Voice-Activated Trading</h3>
+                <p>Execute trades and manage your portfolio using voice commands.</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-users fa-3x"></i>
+                <h3>Social Trading Network</h3>
+                <p>Follow and copy the trades of successful investors.</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-chart-bar fa-3x"></i>
+                <h3>Advanced Analytics Dashboard</h3>
+                <p>Deep insights into market trends and user performance.</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-bell fa-3x"></i>
+                <h3>Cross-Platform Notifications</h3>
+                <p>Receive notifications across devices, including mobile and desktop.</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-file-signature fa-3x"></i>
+                <h3>Smart Contract Creation Wizard</h3>
+                <p>Create and deploy your own smart contracts easily.</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-book-open fa-3x"></i>
+                <h3>Integrated Learning Hub</h3>
+                <p>Access courses, webinars, and resources on cryptocurrency and blockchain.</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-gamepad fa-3x"></i>
+                <h3>Gamification Elements</h3>
+                <p>Earn rewards and badges for completing tasks and participating in the community.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="dashboard" data-aos="fade-up">
+        <h2>User Dashboard</h2>
+        <div class="dashboard-container">
+            <div class="card">
+                <h3>Account Balance</h3>
+                <p id="account-balance">$0.00</p>
+                <p id="pi-balance">Pi Balance: <span id="pi-amount">0.00</span> Pi</p>
+            </div>
+            <div class="card">
+                <h3>Recent Transactions</h3>
+                <ul id="transaction-list">
+                    <li>No transactions yet.</li>
+                </ul>
+                <button id="export-transactions" class="btn">Export Transactions</button>
+            </div>
+            <div class="card">
+                <h3>Market Trends</h3>
+                <p>Live updates on market trends and analytics.</p>
+                <div id="market-trends">
+                    <p>Loading market data...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="news" data-aos="fade-up">
+        <h2>Latest Crypto News</h2>
+        <div id="news-feed">
+            <p>Loading news...</p>
+        </div>
+    </section>
+
+    <section id="portfolio" data-aos="fade-up">
+        <h2>Your Portfolio</h2>
+        <div id="portfolio-tracker">
+            <p>Loading portfolio data...</p>
+        </div>
+    </section>
+
+    <section id="price-alerts" data-aos="fade-up">
+        <h2>Set Price Alerts</h2>
+        <form id="price-alert-form">
+            <input type="text" placeholder="Cryptocurrency (e.g., BTC)" required>
+            <input type="number" placeholder="Alert Price" required>
+            <button type="submit" class="btn">Set Alert</button>
+        </form>
+    </section>
+
+    <section id="staking-calculator" data-aos="fade-up">
+        <h2>Staking Rewards Calculator</h2>
+        <form id="staking-form">
+            <input type="number" placeholder="Amount Staked" required>
+            <input type="number" placeholder="Annual Percentage Yield (APY)" required>
+            <button type="submit" class="btn">Calculate Rewards</button>
+        </form>
+        <p id="staking-results"></p>
+    </section>
+
+    <section id="feedback" data-aos="fade-up">
+        <h2>User Feedback</h2>
+        <form id="feedback-form">
+            <textarea placeholder="Your feedback..." required></textarea>
+            <button type="submit" class="btn">Submit Feedback</button>
+        </form>
+    </section>
+
+    <section id="forum" data-aos="fade-up">
+        <h2>Community Forum</h2>
+        <p>Engage with other users and share your thoughts.</p>
+        <div id="forum-posts">
+            <p>Loading forum posts...</p>
+        </div>
+    </section>
+
+    <section id="tutorials" data-aos="fade-up">
+        <h2>Tutorials for New Users</h2>
+        <p>Learn how to use the platform effectively.</p>
+        <ul>
+            <li><a href="#tutorial1">Getting Started with Global Connect</a></li>
+            <li><a href="#tutorial2">How to Trade Cryptocurrencies</a></li>
+            <li><a href="#tutorial3">Understanding Staking</a></li>
+        </ul>
+    </section>
+
+    <section id="login" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Login</h2>
+            <form id="login-form">
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit" class="btn">Login</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="signup" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Sign Up</h2>
+            <form id="signup-form">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit" class="btn">Sign Up</button>
+            </form>
+        </div>
+    </section>
+
+    <footer id="contact" data-aos="fade-up">
+        <h2>Contact Us</h2>
+        <p>For inquiries or support, please visit our <a href="https://github.com/KOSASIH/Global-Connect" style="color: #e94560;">GitHub page</a>.</p>
+        <p>Join us in revolutionizing the digital currency landscape!</p>
+    </footer>
+
+    <div class="notification" id="notification"></div>
+
+    <script>
+        AOS.init();
+
+        // Toggle Dark/Light Mode
+        $("#toggle-theme").click(function () {
+            $("body").toggleClass("light-mode");
+            $(".modal-content").toggleClass("light-mode");
+            $(".feature-item").toggleClass("light-mode");
+            $(".card").toggleClass("light-mode");
+        });
+
+        // Modal functionality
+        const modalLogin = document.getElementById("login");
+        const modalSignup = document.getElementById("signup");
+        const closeButtons = document.querySelectorAll(".close");
+
+        document .querySelector(".btn[href='#login']").onclick = function () {
+            modalLogin.style.display = "block";
+        };
+
+        document.querySelector(".btn [href='#signup']").onclick = function () {
+            modalSignup.style.display = "block";
+        };
+
+        closeButtons.forEach(button => {
+            button.onclick = function () {
+                modalLogin.style.display = "none";
+                modalSignup.style.display = "none";
+            };
+        });
+
+        window.onclick = function (event) {
+            if (event.target == modalLogin || event.target == modalSignup) {
+                modalLogin.style.display = "none";
+                modalSignup.style.display = "none";
+            }
+        };
+
+        // Fetch account balance and transactions from the backend
+        $(document).ready(function () {
+            $.get('http://localhost:5000/api/account', function (data) {
+                $("#account-balance").text(`$${data.balance}`);
+                $("#pi-amount").text(data.pi_balance);
+            });
+
+            $.get('http://localhost:5000/api/transactions', function (data) {
+                const transactions = data.transactions.map(tx => `<li>${tx.description}: $${tx.amount}</li>`).join('');
+                $("#transaction-list").html(transactions || '<li>No transactions yet.</li>');
+            });
+
+            $.get('http://localhost:5000/api/market', function (data) {
+                const trends = data.trends.map(trend => `<p>${trend.name}: $${trend.current_price}</p>`).join('');
+                $("#market-trends").html(trends || '<p>No market data available.</p>');
+            });
+
+            $.get('http://localhost:5000/api/news', function (data) {
+                const newsItems = data.articles.map(article => `<p><strong>${article.title}</strong>: ${article.description}</p>`).join('');
+                $("#news-feed").html(newsItems || '<p>No news available.</p>');
+            });
+
+            $.get('http://localhost:5000/api/portfolio', function (data) {
+                const portfolioItems = data.portfolio.map(item => `<p>${item.name}: ${item.amount} (${item.value})</p>`).join('');
+                $("#portfolio-tracker").html(portfolioItems || '<p>No portfolio data available.</p>');
+            });
+
+            $.get('http://localhost:5000/api/forum', function (data) {
+                const forumPosts = data.posts.map(post => `<p><strong>${post.title}</strong>: ${post.content}</p>`).join('');
+                $("#forum-posts").html(forumPosts || '<p>No forum posts available.</p>');
+            });
+
+            const socket = new WebSocket('ws://localhost:5000/notifications');
+            socket.onmessage = function (event) {
+                const notification = JSON.parse(event.data);
+                showNotification(notification.message);
+            };
+        });
+
+        $("#price-alert-form").submit(function (event) {
+            event.preventDefault();
+            const crypto = $(this).find('input[type="text"]').val();
+            const price = $(this).find('input[type="number"]').val();
+            $.post('http://localhost:5000/api/price-alert', { crypto, price }, function (response) {
+                showNotification(`Price alert set for ${crypto} at $${price}`);
+            });
+        });
+
+        $("#staking-form").submit(function (event) {
+            event.preventDefault();
+            const amountStaked = $(this).find('input[type="number"]').eq(0).val();
+            const apy = $(this).find('input[type="number"]').eq(1).val();
+            const rewards = (amountStaked * (apy / 100)).toFixed(2);
+            $("#staking-results").text(`Estimated Rewards: $${rewards}`);
+        });
+
+        $("#export-transactions").click(function () {
+            $.get('http://localhost:5000/api/transactions/export', function (data) {
+                const blob = new Blob([data], { type: 'text/csv;charset=utf-8;' });
+                const link = document.createElement("a");
+                const url = URL.createObjectURL(blob);
+                link.setAttribute("href", url);
+                link.setAttribute("download", "transaction_history.csv");
+                link.style.visibility = 'hidden';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            });
+        });
+
+        $("#feedback-form").submit(function (event) {
+            event.preventDefault();
+            const feedback = $(this).find('textarea').val();
+            $.post('http://localhost:5000/api/feedback', { feedback }, function (response) {
+                showNotification('Thank you for your feedback!');
+            });
+        });
+
+        function showNotification(message) {
+            const notification = $("#notification");
+            notification.text(message).fadeIn().delay(3000).fadeOut();
+        }
+    </script>
+</body>
+
+</html>
